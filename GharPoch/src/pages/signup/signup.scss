@@ -1,0 +1,74 @@
+page-signup {
+	.sign_up_page{
+		h2{
+			font-size:24px;
+			font-family: 'BrandonGrotesque-Medium';
+			color:#6f6f6f;		
+			@media(min-width:500px){
+				margin-top:30px;
+			}	
+		}
+		form{
+			width:100%;
+			.form_fields{
+				margin-left:20px;
+			}			
+			input, select, button{
+				width:100%;
+				padding:20px 30px 20px 0;
+				border: 0;
+				border-bottom:1px solid #a1a1a1;
+				background:transparent;
+				font-size:16px;
+				font-family: 'Lato-Regular'; 
+				color:#6f6f6f;
+				box-shadow:none;
+			}
+			
+		}
+		.form_submit_fields{
+			width:80%;
+			margin:0 auto;
+			input[type="submit"], button{
+				margin-top:15px;
+				border:1px solid #a4bf1d;
+				text-align:center;
+				padding:20px 0;
+			}
+			p{
+				font-size:13px;
+				font-family: 'Lato-Light'; 
+				color:#6f6f6f;		
+				padding:30px 0;
+				line-height:20px;
+				margin:0;			
+				span{
+					font-family: 'Lato-Bold'; 
+					color:#7aae1b;
+					font-size:16px;
+				}
+				@media(min-width:500px){
+					font-size:24px;
+					span{
+						font-size:24px;
+					}
+				}
+			}
+		}
+		.create-acc{
+			border:0;
+			color:#fff;
+			font-family: 'BrandonGrotesque-Bold'; 
+			font-size:16px;
+			padding:20px 0;
+			background: rgba(114,170,25,1);
+			background: -moz-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(114,170,25,1)), color-stop(19%, rgba(125,174,26,1)), color-stop(34%, rgba(131,173,26,1)), color-stop(68%, rgba(160,190,28,1)), color-stop(100%, rgba(177,196,30,1)));
+			background: -webkit-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+			background: -o-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+			background: -ms-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+			background: linear-gradient(to right, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72aa19', endColorstr='#b1c41e', GradientType=1 );
+		}
+	}
+}

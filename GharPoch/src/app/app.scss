@@ -1,0 +1,168 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+/*BrandonGrotesque  Medium Font family*/
+@font-face { 
+	font-family: 'BrandonGrotesque-Medium'; 
+	src: url('../assets/fonts/BrandonGrotesque-Medium.eot?#iefix') format('embedded-opentype'), 
+	url('../assets/fonts/BrandonGrotesque-Medium.otf') format('opentype'), 
+	url('../assets/fonts/BrandonGrotesque-Medium.woff') format('woff'), 
+	url('../assets/fonts/BrandonGrotesque-Medium.ttf') format('truetype'), 
+	url('../assets/fonts/BrandonGrotesque-Medium.svg#BrandonGrotesque-Medium') format('svg'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+/*BrandonGrotesque Bold  Font family*/
+@font-face { 
+	font-family: 'BrandonGrotesque-Bold'; 
+	src: url('../assets/fonts/BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'), 
+	url('../assets/fonts/BrandonGrotesque-Bold.otf') format('opentype'), 
+	url('../assets/fonts/BrandonGrotesque-Bold.woff') format('woff'), 
+	url('../assets/fonts/BrandonGrotesque-Bold.ttf') format('truetype'), 
+	url('../assets/fonts/BrandonGrotesque-Bold.svg#BrandonGrotesque-Bold') format('svg'); 
+	font-weight: normal; 
+	font-style: normal;
+}
+
+/*Lato-Light Font family*/
+@font-face { 
+	font-family: 'Lato-Light'; 
+	src: url('../assets/fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), 
+	url('../assets/fonts/Lato-Light.woff') format('woff'), 
+	url('../assets/fonts/Lato-Light.ttf') format('truetype'), 
+	url('../assets/fonts/Lato-Light.svg#Lato-Light') format('svg'); 
+	font-weight: normal; font-style: normal; 
+}
+
+/*Lato-Bold Font family*/
+@font-face { 
+	font-family: 'Lato-Bold'; 
+	src: url('../assets/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), 
+	url('../assets/fonts/Lato-Bold.woff') format('woff'), 
+	url('../assets/fonts/Lato-Bold.ttf') format('truetype'), 
+	url('../assets/fonts/Lato-Bold.svg#Lato-Bold') format('svg'); 
+	font-weight: normal; font-style: normal; 
+}
+
+
+
+ion-footer{
+	.toolbar-background-md, .toolbar-background-ios{
+		background:#6f6f6f;
+	}
+	p{
+		margin:0;
+		color:#fff;
+		font-size:16px;
+		line-height:20px;
+		padding-top:5px;
+		font-family: 'Lato-Light';
+		text-align:left;
+		&:nth-of-type(2n){
+			padding-top:0;
+		}
+		@media(max-width:500px){
+			font-size:12px;
+		}
+	}
+	button{
+		background:url('../assets/images/foot_cart.png');
+		background-size:100%;
+		background-repeat:no-repeat;    
+		height: 50px;
+		width: 50px;
+	    float: right;
+	}
+	.toolbar-title-md{
+		padding:0 0 0 10px;
+	}
+	.toolbar-md{
+		padding:0;
+		min-height:50px;
+	}
+}
+
+.toolbar-ios ion-title{
+	padding:0;
+}
+
+.toolbar-title{
+	padding: 0; 
+	font-size:26px;
+	text-align:center;
+	margin-left: -20px;
+	color:#fff;		
+	font-family: 'BrandonGrotesque-Medium'; 
+	@media(max-width:500px){
+		font-size:17px;					
+	}
+	span{
+		font-size: 16px; 
+		font-family: 'Lato-Light'; 
+		font-weight: 600;
+		@media(max-width:500px){
+			font-size: 10px; 			
+		}
+	}	
+}
+
+.header_gradient{
+	position:relative;
+	padding:0px 15px 0;
+	background: rgba(114,170,25,1);
+	background: -moz-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(114,170,25,1)), color-stop(19%, rgba(125,174,26,1)), color-stop(34%, rgba(131,173,26,1)), color-stop(68%, rgba(160,190,28,1)), color-stop(100%, rgba(177,196,30,1)));
+	background: -webkit-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+	background: -o-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+	background: -ms-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+	background: linear-gradient(to right, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72aa19', endColorstr='#b1c41e', GradientType=1 );
+	ion-title{
+		width:110%;	
+	}
+}
+.toolbar-background-md, 
+.toolbar-background-ios{
+	background:transparent;
+}
+
+.back-button-md{
+	padding:0;
+	margin:0;
+	min-width: 20px;
+	color: #fff;
+	z-index: 9999;
+}
+
+.back-button-icon-ios{
+	color:#fff;
+}
+
+.back-button-text {
+	display:none;
+}
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios{
+	border-color: transparent;
+}
+ion-footer{
+		.toolbar-title{
+			margin-left:0;
+			padding-left:10px;
+		}
+}
