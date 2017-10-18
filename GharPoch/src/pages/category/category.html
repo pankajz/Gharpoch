@@ -1,8 +1,39 @@
-<ion-tabs tabsPlacement="top">
-    <ion-tab [root]="fruitsVegetablesRoot" tabTitle="Fruits vegetables"></ion-tab>
-    <ion-tab [root]="groceriesStaplesSpicesRoot" tabTitle="Groceries staples spices"></ion-tab>
-    <ion-tab [root]="dairyBakeryBeveragesRoot" tabTitle="Dairy bakery beverages"></ion-tab>
-    <ion-tab [root]="snacksSpreadsPacksRoot" tabTitle="Snacks spreads packs"></ion-tab>
-    <ion-tab [root]="householdNeedsRoot" tabTitle="Household needs"></ion-tab>
-    <ion-tab [root]="personalCareBabyCareRoot" tabTitle="Personal care baby care"></ion-tab>
+<ion-header class="header_gradient">
+  <ion-navbar>
+    <ion-title>Products</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-tabs #ionTabs class="tab-clr" tabsPlacement="top" tabsHighlight="true" scrollX="true">
+    <ion-tab [root]="fruitsVegetablesRoot" tabTitle="Fruits vegetables" (click)="changeCat('Fruits vegetables')"></ion-tab>
+    <ion-tab [root]="groceriesStaplesSpicesRoot" tabTitle="Groceries staples spices" (click)="changeCat('Groceries staples spices')"></ion-tab>
+    <ion-tab [root]="dairyBakeryBeveragesRoot" tabTitle="Dairy bakery beverages" (click)="changeCat('Dairy bakery beverages')"></ion-tab>
+    <ion-tab [root]="snacksSpreadsPacksRoot" tabTitle="Snacks spreads packs" (click)="changeCat('Snacks spreads packs')"></ion-tab>
+    <ion-tab [root]="householdNeedsRoot" tabTitle="Household needs" (click)="changeCat('Household needs')"></ion-tab>
+    <ion-tab [root]="personalCareBabyCareRoot" tabTitle="Personal care baby care" (click)="changeCat('Personal care & baby care')"></ion-tab>
 </ion-tabs>
+<!--<ion-toolbar>
+    <ion-segment [(ngModel)]="currState">
+        <ion-segment-button value="0">
+            A
+        </ion-segment-button>
+        <ion-segment-button value="1">
+           B
+        </ion-segment-button>
+        <ion-segment-button value="2">
+            C
+        </ion-segment-button>
+    </ion-segment>
+</ion-toolbar>
+<ion-content>
+    <ion-slides initialSlide={{currState}} (click)="onTabUpdate($event)">
+        <ion-slide>
+            test
+        </ion-slide>
+        <ion-slide>
+            test2
+        </ion-slide>
+        <ion-slide>
+            test3
+        </ion-slide>
+    </ion-slides>
+</ion-content>-->

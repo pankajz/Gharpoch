@@ -1,6 +1,5 @@
-page-dairy-bakery-beverages {
-
-		.product-img{
+page-all-product {
+    .product-img{
 			img{
 				width:100%;
 				border:.1px dotted #333;
@@ -104,4 +103,10 @@ page-dairy-bakery-beverages {
 				
 			}
 		}
+        #notifications-badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            border-radius: 50%;
+        }
 }

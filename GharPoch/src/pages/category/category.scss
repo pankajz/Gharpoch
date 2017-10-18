@@ -1,3 +1,18 @@
 page-category {
-
+    ion-app, ion-nav, ion-tab, ion-tabs, .app-root{
+        top:auto;
+    }
+    .tab-clr, .tabbar.show-tabbar{
+        background: linear-gradient(to right, #72aa19 0%, #7dae1a 19%, #83ad1a 34%, #a0be1c 68%, #b1c41e 100%);
+    }
+    .tabbar.show-tabbar a{
+        color: #fff;
+    }
+    .tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .tab-button[aria-selected=true]{
+        color: #fff;
+        border-bottom: 3px solid ;
+    }
+    .tab-button{
+        max-width: 300px;
+    }
 }

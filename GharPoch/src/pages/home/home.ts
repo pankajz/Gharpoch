@@ -8,9 +8,16 @@ import { SignupPage } from '../signup/signup';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  cartCount:any;
   constructor(public navCtrl: NavController) {
-
+    
+    if(!this.cartCount){
+      sessionStorage.setItem('cartCount','0');
+      this.cartCount = parseInt(sessionStorage.getItem('cartCount'));
+    }else{
+      this.cartCount = parseInt(sessionStorage.getItem('cartCount'));
+    }
+    
   }
 
     shop(){

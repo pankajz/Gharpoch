@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
+import { AllProductPage } from '../all-product/all-product'
 
 /**
  * Generated class for the ShopPage page.
@@ -15,16 +16,22 @@ import { CategoryPage } from '../category/category';
   templateUrl: 'shop.html',
 })
 export class ShopPage {
-
+  cartCount:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    if(!this.cartCount){
+      sessionStorage.setItem('cartCount','0');
+      this.cartCount = parseInt(sessionStorage.getItem('cartCount'));
+    }else{
+      this.cartCount = parseInt(sessionStorage.getItem('cartCount'));
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShopPage');
   }
 
- categories(){
-  	//this.navCtrl.push(CategoryPage);
+ categories(id,cat){
+  	this.navCtrl.push(AllProductPage,{selected_id : id,selected_cat : cat});
   }
 
 

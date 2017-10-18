@@ -1,5 +1,5 @@
 <!--
-  Generated template for the DairyBakeryBeveragesPage page.
+  Generated template for the AllProductPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header class="header_gradient">
 
   <ion-navbar>
-    <ion-title>Dairy Bakery & Beverages</ion-title>
+    <ion-title>{{header_name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,32 +15,32 @@
 
 <ion-content class="shop_categories_inner">
 	<ion-grid class="cat_list" text-uppercase text-center>
-		<ion-row class="cat-inner-list">
+		<ion-row class="cat-inner-list" *ngFor="let prod of items">
 		    <ion-col col-4 class="product-img">
 		    	<a href="#">			
-					<img src="http://gharphoch.com.cs-mum-9.webhostbox.net/products/1508162185.jpg" alt="flower"/>
+					<img src="{{prod.product_images1}}" alt="flower"/>
 				</a>
 		    </ion-col>
 		    <ion-col text-left col-8 class="product-details">
 		     	<a href="#">
-					<p text-uppercase>Spinach <span>1.22 lbs</span></p>		
+					<p text-uppercase>{{prod.name}} <span>{{prod.size}} {{prod.unit}}</span></p>		
 		     		<ion-row>
 			     		<ion-col col-5>
-							<span class="product-price">र 22    <sup>र 28</sup></span>		
+							<span class="product-price">र {{prod.offer_price}}    <sup>र {{prod.sell_price}}</sup></span>		
 						</ion-col>
 						<ion-col col-7 class="add-cart">
 							<p text-center>Add to Cart</p>		
 							<form>
-								<input type="button" value="-">
-								<input type="text" value="1">
-								<input type="button" value="+">
+								<input (click)="removeFromCart(prod)" type="button" value="-">
+								<input type="text" value="{{cartCount}}">
+								<input (click)="addToCart(prod)" type="button" value="+">
 							</form>		
 						</ion-col>
 					</ion-row>
 				</a>
 		    </ion-col>
 		</ion-row>
-		<ion-row class="cat-inner-list">
+		<!--<ion-row class="cat-inner-list">
 		    <ion-col col-4 class="product-img">
 		    	<a href="#">			
 					<img src="http://gharphoch.com.cs-mum-9.webhostbox.net/products/1508162185.jpg" alt="flower"/>
@@ -89,15 +89,16 @@
 					</ion-row>
 				</a>
 		    </ion-col>
-		</ion-row> 
+		</ion-row> -->
 	</ion-grid>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
     <ion-title text-uppercase>
-    	<button></button>
+    	<button><ion-badge id="notifications-badge" color="danger"> {{cartCount}}</ion-badge></button>
     	<p>standard: Today, 5:00 PM TO 8:00 PM</p>
     	<p>gHARPOCH EXPRESS : bY Today, 9:00 PM</p>
     </ion-title>
   </ion-toolbar>
 </ion-footer>
+

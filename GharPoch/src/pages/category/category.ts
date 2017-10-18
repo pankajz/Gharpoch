@@ -21,8 +21,18 @@ export class CategoryPage {
   snacksSpreadsPacksRoot = 'SnacksSpreadsPacksPage'
   householdNeedsRoot = 'HouseholdNeedsPage'
   personalCareBabyCareRoot = 'PersonalCareBabyCarePage'
+  currState:any;
+  cat:any;
 
+  constructor(public navCtrl: NavController) {
+    this.currState=0;
+    
+  }
 
-  constructor(public navCtrl: NavController) {}
+  
+  onTabUpdate(event){
+        let newIndexAfterUpdate = event.activeIndex;
+        this.currState = String(newIndexAfterUpdate);
+ }
 
 }
