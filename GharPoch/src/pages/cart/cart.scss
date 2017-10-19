@@ -1,0 +1,112 @@
+page-cart {
+    .product-img{
+			img{
+				width:100%;
+				border:.1px dotted #333;
+			}
+		}
+		.product-details{
+		    overflow: hidden;
+			a{
+				text-decoration:none;
+				ion-col > span{
+					font-size:24px;
+					color:#333;
+					font-family: 'BrandonGrotesque-Medium';
+					sup{
+						position:relative;
+						top:0px;
+						font-size:14px;
+						&:before{
+							content:'';
+							width:20px;
+							height:1px;
+							background:#333;
+							position:absolute;
+							top:11px;
+							display:block;
+							right:0;
+						}
+						&:after{
+							content:'';
+							width:20px;
+							height:1px;
+							background:#333;
+							position:absolute;
+							top:9px;
+							display:block;
+							right:0;
+						}
+					}
+				}
+			}
+			p{
+				font-size:20px;
+				color:#333;
+				font-family: 'BrandonGrotesque-Medium'; 
+				border-bottom:1px solid #72aa19;
+				margin-bottom:0px;
+				margin-top:0;
+					span{
+							float:right;
+							font-size:14px;
+							margin-top: 5px;
+					}
+			}
+			.add-cart{
+				p{
+					border-bottom: 0;
+					font-size: 12px;
+					color: #333;
+					margin-top: 10px;
+					display: inline-block;
+					width: 100%;
+					margin-bottom: 10px;
+				}
+				form{
+					input{
+						width:auto;
+						font-size: 18px;
+						height: 30px;
+						color: #fff;
+						line-height: 26px;
+						width: 30px;
+						background: rgba(114,170,25,1);
+						background: -moz-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+						background: -webkit-gradient(left top, right top, color-stop(0%, rgba(114,170,25,1)), color-stop(19%, rgba(125,174,26,1)), color-stop(34%, rgba(131,173,26,1)), color-stop(68%, rgba(160,190,28,1)), color-stop(100%, rgba(177,196,30,1)));
+						background: -webkit-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+						background: -o-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+						background: -ms-linear-gradient(left, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+						background: linear-gradient(to right, rgba(114,170,25,1) 0%, rgba(125,174,26,1) 19%, rgba(131,173,26,1) 34%, rgba(160,190,28,1) 68%, rgba(177,196,30,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72aa19', endColorstr='#b1c41e', GradientType=1 );
+						border-radius:50%;
+						border:0;
+						box-shadow:0px 2px 4px #797979;
+					}	
+					input[type="text"]{
+						width:40px;
+						background:transparent;
+						border-radius:0;
+						color: #333;
+						text-align: center;
+						box-shadow:none;
+						margin:0 2%;
+					}
+				}
+			}
+		}
+		.cat_list{
+			.cat-inner-list{
+				position:relative;
+				overflow:hidden;
+				margin-bottom:10px;
+				
+			}
+		}
+        #notifications-badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            border-radius: 50%;
+        }
+}

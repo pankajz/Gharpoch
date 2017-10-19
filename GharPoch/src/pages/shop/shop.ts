@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 import { AllProductPage } from '../all-product/all-product'
@@ -18,6 +18,10 @@ import { AllProductPage } from '../all-product/all-product'
 export class ShopPage {
   cartCount:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
+  }
+
+  ngOnInit(): void {
     if(!this.cartCount){
       sessionStorage.setItem('cartCount','0');
       this.cartCount = parseInt(sessionStorage.getItem('cartCount'));

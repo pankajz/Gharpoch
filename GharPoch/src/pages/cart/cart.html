@@ -1,5 +1,5 @@
 <!--
-  Generated template for the AllProductPage page.
+  Generated template for the CartPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header class="header_gradient">
 
   <ion-navbar>
-    <ion-title>{{header_name}}</ion-title>
+    <ion-title>CART</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,26 +15,21 @@
 
 <ion-content class="shop_categories_inner">
 	<ion-grid class="cat_list" text-uppercase text-center>
-		<ion-row class="cat-inner-list" *ngFor="let prod of items">
+		<ion-row class="cat-inner-list">
 		    <ion-col col-4 class="product-img">
 		    	<a href="#">			
-					<img src="{{prod.product_images1}}" alt="flower"/>
+					<img src="assets/images/fruits.png" alt="flower"/>
 				</a>
 		    </ion-col>
 		    <ion-col text-left col-8 class="product-details">
 		     	<a href="#">
-					<p text-uppercase>{{prod.name}} <span>{{prod.size}} {{prod.unit}}</span></p>		
+					<p text-uppercase>name <span>50 kg</span></p>		
 		     		<ion-row>
 			     		<ion-col col-5>
-							<span class="product-price">र {{prod.offer_price}}    <sup>र {{prod.sell_price}}</sup></span>		
+							<span class="product-price">र 50 </span>		
 						</ion-col>
 						<ion-col col-7 class="add-cart">
-							<p text-center>Add to Cart</p>		
-							<form>
-								<input (click)="removeFromCart(prod)" type="button" value="-">
-								<input type="text" value="{{prod.quantity}}">
-								<input (click)="addToCart(prod)" type="button" value="+">
-							</form>		
+							<p text-center>Quantity : 2</p>		
 						</ion-col>
 					</ion-row>
 				</a>
@@ -45,10 +40,9 @@
 <ion-footer>
   <ion-toolbar>
     <ion-title text-uppercase>
-    	<button (click)="gotToCart()"><ion-badge id="notifications-badge" color="danger"> {{cartCount}}</ion-badge></button>
+    	<button (click)="gotToCart()"><ion-badge id="notifications-badge" color="danger"> 0</ion-badge></button>
     	<p>standard: Today, 5:00 PM TO 8:00 PM</p>
     	<p>gHARPOCH EXPRESS : bY Today, 9:00 PM</p>
     </ion-title>
   </ion-toolbar>
 </ion-footer>
-

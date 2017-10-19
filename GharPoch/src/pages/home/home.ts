@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ShopPage } from '../shop/shop';
 import { SignupPage } from '../signup/signup';
@@ -11,16 +11,14 @@ export class HomePage {
   cartCount:any;
   constructor(public navCtrl: NavController) {
     
-    if(!this.cartCount){
-      sessionStorage.setItem('cartCount','0');
-      this.cartCount = parseInt(sessionStorage.getItem('cartCount'));
-    }else{
-      this.cartCount = parseInt(sessionStorage.getItem('cartCount'));
-    }
+    
     
   }
 
-    shop(){
+   
+
+
+  shop(){
 	  	this.navCtrl.push(ShopPage);
 	}
 	signup(){

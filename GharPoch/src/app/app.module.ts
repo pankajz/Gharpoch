@@ -10,9 +10,12 @@ import { HomePage } from '../pages/home/home';
 import { ShopPage } from '../pages/shop/shop';
 import { CategoryPage } from '../pages/category/category';
 import { SignupPage } from '../pages/signup/signup';
+import { CartPage } from '../pages/cart/cart';
+import { OrderConfirmPage } from '../pages/order-confirm/order-confirm';
 import { WebServiceProvider } from '../providers/web-service/web-service';
 import { AllProductPage } from '../pages/all-product/all-product';
 import { ProductsOprationsProvider } from '../providers/products-oprations/products-oprations';
+import { StorageProvider } from '../providers/storage/storage';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { ProductsOprationsProvider } from '../providers/products-oprations/produ
     ShopPage,
     CategoryPage,
     SignupPage,
-    AllProductPage
+    AllProductPage,
+    OrderConfirmPage,
+    CartPage
   ],
   imports: [
     BrowserModule,
@@ -35,14 +40,17 @@ import { ProductsOprationsProvider } from '../providers/products-oprations/produ
     ShopPage,
     CategoryPage,
     SignupPage,
-    AllProductPage
+    AllProductPage,
+    OrderConfirmPage,
+    CartPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WebServiceProvider,
-    ProductsOprationsProvider
+    ProductsOprationsProvider,
+    StorageProvider
   ]
 })
 export class AppModule {}

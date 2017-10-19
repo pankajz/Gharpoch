@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductsOprationsProvider } from '../../providers/products-oprations/products-oprations';
+import { CartPage } from '../cart/cart';
 
 /**
  * Generated class for the AllProductPage page.
@@ -51,15 +52,21 @@ export class AllProductPage {
   addToCart(item){
     item.quantity+=1;
     this.cartCount +=1;
+    sessionStorage.setItem('cartCount',this.cartCount);
   }
 
   removeFromCart(item){
     if(item.quantity>0){
       item.quantity-=1;
       this.cartCount -=1;
+      sessionStorage.setItem('cartCount',this.cartCount);
     }else{
       console.log("No item selected");
     }
+  }
+
+  gotToCart(){
+    this.navCtrl.push(CartPage);
   }
 
 }
