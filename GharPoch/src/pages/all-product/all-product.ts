@@ -53,6 +53,8 @@ export class AllProductPage {
     item.quantity+=1;
     this.cartCount +=1;
     sessionStorage.setItem('cartCount',this.cartCount);
+    console.log(JSON.stringify(item));
+    this.cartlist.push({"product_id":item.id,"qty":item.quantity});
   }
 
   removeFromCart(item){
@@ -60,13 +62,14 @@ export class AllProductPage {
       item.quantity-=1;
       this.cartCount -=1;
       sessionStorage.setItem('cartCount',this.cartCount);
+      console.log(JSON.stringify(item));
     }else{
       console.log("No item selected");
     }
   }
 
   gotToCart(){
-    this.navCtrl.push(CartPage);
+    this.navCtrl.push(CartPage,{jsonData : this.cartlist});
   }
 
 }

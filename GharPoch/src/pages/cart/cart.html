@@ -7,42 +7,33 @@
 <ion-header class="header_gradient">
 
   <ion-navbar>
-    <ion-title>CART</ion-title>
+    <ion-title>Place Order</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content class="shop_categories_inner">
-	<ion-grid class="cat_list" text-uppercase text-center>
-		<ion-row class="cat-inner-list">
-		    <ion-col col-4 class="product-img">
-		    	<a href="#">			
-					<img src="assets/images/fruits.png" alt="flower"/>
-				</a>
-		    </ion-col>
-		    <ion-col text-left col-8 class="product-details">
-		     	<a href="#">
-					<p text-uppercase>name <span>50 kg</span></p>		
-		     		<ion-row>
-			     		<ion-col col-5>
-							<span class="product-price">र 50 </span>		
-						</ion-col>
-						<ion-col col-7 class="add-cart">
-							<p text-center>Quantity : 2</p>		
-						</ion-col>
-					</ion-row>
-				</a>
-		    </ion-col>
-		</ion-row>
-	</ion-grid>
+	<ion-item>
+    <ion-label color="primary" stacked>Enter Phone Number</ion-label>
+    <ion-input type="number" placeholder="Enter Phone Number" [(ngModel)]="number"></ion-input>
+  </ion-item>
+	<ion-item>
+    <ion-textarea placeholder="Address" [(ngModel)]="address"></ion-textarea>
+  </ion-item>
+	<ion-item>
+    <ion-label color="primary" stacked>City</ion-label>
+    <ion-input type="text" placeholder="City" [(ngModel)]="city"></ion-input>
+  </ion-item>
+	<ion-item>
+    <ion-label color="primary" stacked>State</ion-label>
+    <ion-input type="text" placeholder="State" [(ngModel)]="state"></ion-input>
+  </ion-item>
+	<ion-item>
+    <ion-label color="primary" stacked>PinCode</ion-label>
+    <ion-input type="number" placeholder="Zip" [(ngModel)]="zip"></ion-input>
+  </ion-item>
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <ion-title text-uppercase>
-    	<button (click)="gotToCart()"><ion-badge id="notifications-badge" color="danger"> 0</ion-badge></button>
-    	<p>standard: Today, 5:00 PM TO 8:00 PM</p>
-    	<p>gHARPOCH EXPRESS : bY Today, 9:00 PM</p>
-    </ion-title>
-  </ion-toolbar>
+<ion-footer >
+    <button ion-button full (click)='order()'>Submit</button>
 </ion-footer>
