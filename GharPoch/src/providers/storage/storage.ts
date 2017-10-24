@@ -15,4 +15,15 @@ export class StorageProvider {
     console.log('Hello StorageProvider Provider');
   }
 
+  storeProduct(data){
+    if(data){
+      data = JSON.stringify(data);
+      sessionStorage.setItem('products',data);
+    }else{
+      data=sessionStorage.getItem("products");
+      data = JSON.parse(data);
+    }
+    return data;
+  }
+
 }

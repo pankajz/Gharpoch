@@ -15,31 +15,33 @@
 
 <ion-content class="shop_categories_inner">
 	<ion-grid class="cat_list" text-uppercase text-center>
-		<ion-row class="cat-inner-list" *ngFor="let prod of items">
-		    <ion-col col-4 class="product-img">
-		    	<a href="#">			
-					<img src="{{prod.product_images1}}" alt="flower"/>
-				</a>
-		    </ion-col>
-		    <ion-col text-left col-8 class="product-details">
-		     	<a href="#">
-					<p text-uppercase>{{prod.name}} <span>{{prod.size}} {{prod.unit}}</span></p>		
-		     		<ion-row>
-			     		<ion-col col-5>
-							<span class="product-price">र {{prod.offer_price}}    <sup>र {{prod.sell_price}}</sup></span>		
-						</ion-col>
-						<ion-col col-7 class="add-cart">
-							<p text-center>Add to Cart</p>		
-							<form>
-								<input (click)="removeFromCart(prod)" type="button" value="-">
-								<input type="text" value="{{prod.quantity}}">
-								<input (click)="addToCart(prod)" type="button" value="+">
-							</form>		
-						</ion-col>
-					</ion-row>
-				</a>
-		    </ion-col>
-		</ion-row>
+		<ng-container *ngFor="let prod of items">
+			<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id">
+					<ion-col col-4 class="product-img">
+						<a href="#">			
+						<img src="{{prod.product_images1}}" alt="flower"/>
+					</a>
+					</ion-col>
+					<ion-col text-left col-8 class="product-details">
+						<a href="#">
+						<p text-uppercase>{{prod.name}} <span>{{prod.size}} {{prod.unit}}</span></p>		
+							<ion-row>
+								<ion-col col-5>
+								<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+							</ion-col>
+							<ion-col col-7 class="add-cart">
+								<p text-center>Add to Cart</p>		
+								<form>
+									<input (click)="removeFromCart(prod)" type="button" value="-">
+									<input type="text" value="{{prod.quantity}}">
+									<input (click)="addToCart(prod)" type="button" value="+">
+								</form>		
+							</ion-col>
+						</ion-row>
+					</a>
+					</ion-col>
+			</ion-row>
+		</ng-container>
 	</ion-grid>
 </ion-content>
 <ion-footer>

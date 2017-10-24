@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductsOprationsProvider } from '../../providers/products-oprations/products-oprations';
+import { StorageProvider } from '../../providers/storage/storage';
 import { CartPage } from '../cart/cart';
 
 /**
@@ -22,15 +23,16 @@ export class AllProductPage {
   items=[];
   cartlist=[];
   cartCount : any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider) {
     this.header_id = navParams.get('selected_id');
     this.header_name = navParams.get('selected_cat');
     this.cartCount=0;
+    this.cartCounting();
     
 }
 
   ionViewDidLoad() {
-    this.prodOpr.getAllProduct()
+    /*this.prodOpr.getAllProduct()
     .then(data => {
         
         this.resp = data;
@@ -46,26 +48,46 @@ export class AllProductPage {
           //this.items.push({"menuId":this.resp[i].menuId,"dishName":this.resp[i].dishName,"category":this.resp[i].category,"rates":this.resp[i].rates,"isActive":this.resp[i].isActive,"createdOn":this.resp[i].createdOn,"modifiedOn":this.resp[i].modifiedOn,"quantity":0});
           console.log(this.items);
         }
-      });
+      });*/
+
+      this.items = this.stor.storeProduct('');
   }
 
   addToCart(item){
     item.quantity+=1;
-    this.cartCount +=1;
-    sessionStorage.setItem('cartCount',this.cartCount);
-    console.log(JSON.stringify(item));
-    this.cartlist.push({"product_id":item.id,"qty":item.quantity});
+    //this.cartCount +=1;
+    this.stor.storeProduct(this.items);
+    this.cartCounting();
+    //sessionStorage.setItem('cartCount',this.cartCount);
+    //console.log(JSON.stringify(item));
+    //this.cartlist.push({"product_id":item.id,"qty":item.quantity});
   }
 
   removeFromCart(item){
     if(item.quantity>0){
       item.quantity-=1;
-      this.cartCount -=1;
-      sessionStorage.setItem('cartCount',this.cartCount);
-      console.log(JSON.stringify(item));
+      //this.cartCount -=1;
+      this.stor.storeProduct(this.items);
+      this.cartCounting();
+      //sessionStorage.setItem('cartCount',this.cartCount);
+      //console.log(JSON.stringify(item));
     }else{
       console.log("No item selected");
     }
+  }
+
+  cartCounting(){
+    var allprod = this.stor.storeProduct('');
+    var countprod = 0;
+    if(allprod){
+      for(var i=0; i<allprod.length;i++){
+        if(allprod[i].quantity>0){
+          countprod++;
+        }
+      }
+    }
+    console.log(countprod);
+    this.cartCount = countprod;
   }
 
   gotToCart(){
