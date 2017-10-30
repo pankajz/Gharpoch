@@ -123,4 +123,7 @@ page-all-product {
             right: 2px;
             border-radius: 50%;
         }
+		form.ng-untouched.ng-pristine.ng-valid {
+			text-align: center !important;
+		}
 }

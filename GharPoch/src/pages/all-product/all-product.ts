@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductsOprationsProvider } from '../../providers/products-oprations/products-oprations';
 import { StorageProvider } from '../../providers/storage/storage';
-import { CartPage } from '../cart/cart';
+
+import { CartItemsPage } from '../../pages/cart-items/cart-items';
 
 /**
  * Generated class for the AllProductPage page.
@@ -23,6 +24,7 @@ export class AllProductPage {
   items=[];
   cartlist=[];
   cartCount : any;
+  total :any = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider) {
     this.header_id = navParams.get('selected_id');
     this.header_name = navParams.get('selected_cat');
@@ -50,7 +52,11 @@ export class AllProductPage {
         }
       });*/
 
-      this.items = this.stor.storeProduct('');
+      //this.items = this.stor.storeProduct('');
+  }
+  ionViewWillEnter() {
+    this.cartCounting();
+    this.items = this.stor.storeProduct('');
   }
 
   addToCart(item){
@@ -79,19 +85,22 @@ export class AllProductPage {
   cartCounting(){
     var allprod = this.stor.storeProduct('');
     var countprod = 0;
+    var tot = 0;
     if(allprod){
       for(var i=0; i<allprod.length;i++){
         if(allprod[i].quantity>0){
           countprod++;
+          tot += (allprod[i].offer_price*allprod[i].quantity);
         }
       }
     }
     console.log(countprod);
     this.cartCount = countprod;
+    this.total = tot;
   }
 
   gotToCart(){
-    this.navCtrl.push(CartPage,{jsonData : this.cartlist});
+    this.navCtrl.push(CartItemsPage);
   }
 
 }

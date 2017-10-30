@@ -7,31 +7,52 @@
 <ion-header class="header_gradient">
 
   <ion-navbar>
-    <ion-title>Place Order</ion-title>
+    <ion-title>PLACE ORDER</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content class="shop_categories_inner">
+  <ion-item>
+    <ion-label color="primary" stacked>Enter Name</ion-label>
+    <ion-input type="text" placeholder="Enter Name" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>Enter Email</ion-label>
+    <ion-input type="email" placeholder="Enter Email" [(ngModel)]="email"></ion-input>
+  </ion-item>
 	<ion-item>
     <ion-label color="primary" stacked>Enter Phone Number</ion-label>
-    <ion-input type="number" placeholder="Enter Phone Number" [(ngModel)]="number"></ion-input>
+    <ion-input type="tel" maxlength="12" placeholder="Enter Phone Number" [(ngModel)]="number"></ion-input>
   </ion-item>
 	<ion-item>
     <ion-textarea placeholder="Address" [(ngModel)]="address"></ion-textarea>
   </ion-item>
 	<ion-item>
     <ion-label color="primary" stacked>City</ion-label>
-    <ion-input type="text" placeholder="City" [(ngModel)]="city"></ion-input>
+    <ion-select [(ngModel)]="city">
+      <ion-option value="Sangli">Sangli</ion-option>
+      <ion-option value="Miraj">Miraj</ion-option>
+    </ion-select>
   </ion-item>
 	<ion-item>
     <ion-label color="primary" stacked>State</ion-label>
-    <ion-input type="text" placeholder="State" [(ngModel)]="state"></ion-input>
+    <ion-input type="text" placeholder="State" value="Maharashtra" [(ngModel)]="state" readonly="true"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label color="primary" stacked>Delivery Slot</ion-label>
+  <!--<ion-datetime displayFormat="HH:mm" [(ngModel)]="time"></ion-datetime>-->
+  <ion-select [(ngModel)]="time">
+      <ion-option value="8:30AM TO 10:30AM">8:30AM TO 10:30AM</ion-option>
+      <ion-option value="12:30PM TO 2:30PM">12:30PM TO 2:30PM</ion-option>
+      <ion-option value="4:00PM TO 6:00PM">4:00PM TO 6:00PM</ion-option>
+      <ion-option value="7:00PM TO 9:00PM">8:00PM TO 9:00PM</ion-option>
+    </ion-select>
   </ion-item>
 	<ion-item>
     <ion-label color="primary" stacked>PinCode</ion-label>
-    <ion-input type="number" placeholder="Zip" [(ngModel)]="zip"></ion-input>
+    <ion-input [attr.maxlength]="7" type="tel" placeholder="Zip" [(ngModel)]="zip"></ion-input>
   </ion-item>
 </ion-content>
 <ion-footer >

@@ -6,7 +6,7 @@
 -->
 <ion-header class="header_gradient">
     <ion-navbar>
-    	<ion-title text-uppercase text-center>GharPoch<span class="sub-text">.com</span></ion-title>
+    	<ion-title text-uppercase text-center>GharPhoch<span class="sub-text">.com</span></ion-title>
     </ion-navbar>
 	<ion-slides class="main_slider" autoplay="2000" loop="true" speed="1500">
 		<ion-slide>
@@ -31,13 +31,13 @@
 	<ion-grid class="cat_list" text-uppercase text-center>
 	  <ion-row>
 	    <ion-col col-6>
-	    	<a href="#" (click)="categories(2,'FRUITS & VEGETABLE')">
+	    	<a href="#" (click)="categories(11,'FRUITS & VEGETABLE')">
 				<p>Fruits & <br/> Vegetables</p>
 				<img src="assets/images/fruits.png" alt="Fruits and vegetables"/>
 			</a>
 	    </ion-col>
 	    <ion-col col-6>
-	     	<a href="#" (click)="categories(3,'GROCERIES, STAPLES & SPICES')">
+	     	<a href="#" (click)="categories(12,'GROCERIES, STAPLES & SPICES')">
 				<p>Groceries, <br/>  staples & spices</p>
 				<img src="assets/images/groceries.png" alt="Groceries staples"/>
 			</a>
@@ -45,13 +45,13 @@
 	  </ion-row>	
 	  <ion-row>
 	    <ion-col col-6>
-	    	<a href="#" (click)="categories(4,'DAIRY, BAKERY & BEVERAGES')">
+	    	<a href="#" (click)="categories(13,'DAIRY, BAKERY & BEVERAGES')">
 				<p>Dairy, bakery <br/> & BEVERAGES</p>
 				<img src="assets/images/dairy.png" alt="Dairy, bakery "/>
 			</a>
 	    </ion-col>
 	    <ion-col col-6>
-	     	<a href="#" (click)="categories(5,'SNACKS, SPREADS & PACKED')">
+	     	<a href="#" (click)="categories(14,'SNACKS, SPREADS & PACKED')">
 				<p>SNACKS,spREADS <br/> & PACKED</p>
 				<img src="assets/images/snacks.png" alt="G>SNACKS spREADS "/>
 			</a>
@@ -59,13 +59,13 @@
 	  </ion-row>	
 	  <ion-row>
 	    <ion-col col-6>
-	    	<a href="#" (click)="categories(6,'HOUSEHOLD NEEDS')">
+	    	<a href="#" (click)="categories(15,'HOUSEHOLD NEEDS')">
 				<p>Household <br/> needs</p>
 				<img src="assets/images/household.png" alt="Household"/>
 			</a>
 	    </ion-col>
 	    <ion-col col-6>
-	     	<a href="#" (click)="categories(7,'PERSONAL CARE')">
+	     	<a href="#" (click)="categories(16,'PERSONAL CARE')">
 				<p>Personal Care <br/> & baby care</p>
 				<img src="assets/images/personal.png" alt="Personal Care "/>
 			</a>
@@ -76,11 +76,12 @@
 <ion-footer>
   <ion-toolbar>
     <ion-title text-uppercase>
-    	<button>
+    	<button (click)="gotToCart()">
 				<ion-badge id="notifications-badge" color="danger"> {{cartCount}}</ion-badge>
 				</button>
-    	<p>standard: Today, 5:00 PM TO 8:00 PM</p>
-    	<p>gHARPOCH EXPRESS : bY Today, 9:00 PM</p>
+				
+    	<!--<p>standard: Today, 5:00 PM TO 8:00 PM</p>-->
+    	<h6>GHARPOCH EXPRESS : 8:30 AM - 9:30 PM</h6>
     </ion-title>
   </ion-toolbar>
 </ion-footer>

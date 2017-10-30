@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { ShopPage } from '../pages/shop/shop';
 import { CategoryPage } from '../pages/category/category';
 import { SignupPage } from '../pages/signup/signup';
+import { CartItemsPage } from '../pages/cart-items/cart-items';
 import { CartPage } from '../pages/cart/cart';
 import { OrderConfirmPage } from '../pages/order-confirm/order-confirm';
 import { WebServiceProvider } from '../providers/web-service/web-service';
@@ -26,7 +27,8 @@ import { StorageProvider } from '../providers/storage/storage';
     SignupPage,
     AllProductPage,
     OrderConfirmPage,
-    CartPage
+    CartPage,
+    CartItemsPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { StorageProvider } from '../providers/storage/storage';
     SignupPage,
     AllProductPage,
     OrderConfirmPage,
-    CartPage
+    CartPage,
+    CartItemsPage
   ],
   providers: [
     StatusBar,

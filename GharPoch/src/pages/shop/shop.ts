@@ -4,6 +4,8 @@ import { CategoryPage } from '../category/category';
 import { AllProductPage } from '../all-product/all-product';
 import { ProductsOprationsProvider } from '../../providers/products-oprations/products-oprations';
 import { StorageProvider } from '../../providers/storage/storage';
+import { CartItemsPage } from '../../pages/cart-items/cart-items';
+
 
 /**
  * Generated class for the ShopPage page.
@@ -22,6 +24,7 @@ export class ShopPage {
   items=[];
   cartlist=[];
   cartCount : any=0;
+  total :any = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider) {
     this.getAllProducts();
   }
@@ -62,17 +65,22 @@ export class ShopPage {
   cartCounting(){
     var allprod = this.stor.storeProduct('');
     var countprod = 0;
+    var tot = 0;
     if(allprod){
       for(var i=0; i<allprod.length;i++){
         if(allprod[i].quantity>0){
           countprod++;
+          tot += (allprod[i].offer_price*allprod[i].quantity);
         }
       }
       console.log(countprod);
       this.cartCount = countprod;
+      this.total = tot;
     }
     
   }
 
-
+  gotToCart(){
+    this.navCtrl.push(CartItemsPage);
+  }
 }
