@@ -4,7 +4,9 @@ import { CategoryPage } from '../category/category';
 import { AllProductPage } from '../all-product/all-product';
 import { ProductsOprationsProvider } from '../../providers/products-oprations/products-oprations';
 import { StorageProvider } from '../../providers/storage/storage';
+import { WebServiceProvider } from '../../providers/web-service/web-service';
 import { CartItemsPage } from '../../pages/cart-items/cart-items';
+import { ProfilePage } from '../profile/profile';
 
 
 /**
@@ -25,16 +27,26 @@ export class ShopPage {
   cartlist=[];
   cartCount : any=0;
   total :any = 0;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider) {
+  expressTime = '8:30AM TO 10:30AM';
+  profres : any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider, public webService :WebServiceProvider) {
     this.getAllProducts();
+   
+    
   }
 
   ionViewWillEnter() {
     this.cartCounting();
+     if(sessionStorage.getItem('expressTime')){
+      this.expressTime = sessionStorage.getItem('expressTime');
+    }else{
+      this.expressTime = '8:30AM TO 10:30AM';
+    }
   }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShopPage');
+    this.getUserProfile();
   }
 
  categories(id,cat){
@@ -53,7 +65,7 @@ export class ShopPage {
           var cat_id = productsLst[i].category_id;
           //if(parseInt(cat_id)==parseInt(this.header_id)){
             //console.log(productsLst[i]);
-            this.items.push({'cat_id':productsLst[i].category_id,'id':productsLst[i].id,'is_active':productsLst[i].is_active,'name':productsLst[i].name,'sell_price':productsLst[i].sell_price,'offer_price':productsLst[i].offer_price,'size':productsLst[i].size,'unit':productsLst[i].unit,'description':productsLst[i].description,'product_images1':'http://gharphoch.com.cs-mum-9.webhostbox.net'+productsLst[i].product_images[0].url,'quantity':0});
+            this.items.push({'cat_id':productsLst[i].category_id,'id':productsLst[i].id,'is_active':productsLst[i].is_active,'name':productsLst[i].name,'sell_price':productsLst[i].sell_price,'offer_price':productsLst[i].offer_price,'size':productsLst[i].size,'unit':productsLst[i].unit, 'sub_category_id':productsLst[i].sub_category_id, 'description':productsLst[i].description,'product_images1':'http://gharphoch.com.cs-mum-9.webhostbox.net'+productsLst[i].product_images[0].url,'quantity':0});
           //}
           //console.log(this.items);
         }
@@ -61,6 +73,19 @@ export class ShopPage {
         this.cartCounting();
       });
   }
+
+   getUserProfile(){
+      var data=localStorage.getItem("userdata");
+      data = JSON.parse(data);
+      this.webService.getUserProfile(data)
+      .then(data => {
+        this.profres = data;
+        console.log(this.profres);
+        var userdetails = this.profres.user;
+        this.stor.userProf(userdetails);
+      });
+
+    }
 
   cartCounting(){
     var allprod = this.stor.storeProduct('');
@@ -82,5 +107,8 @@ export class ShopPage {
 
   gotToCart(){
     this.navCtrl.push(CartItemsPage);
+  }
+  gotoProfile(){
+    this.navCtrl.push(ProfilePage);
   }
 }

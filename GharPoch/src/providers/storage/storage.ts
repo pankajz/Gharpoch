@@ -19,11 +19,43 @@ export class StorageProvider {
     if(data){
       data = JSON.stringify(data);
       sessionStorage.setItem('products',data);
+      
     }else{
       data=sessionStorage.getItem("products");
       data = JSON.parse(data);
     }
     return data;
   }
+
+  userData(data){
+    if(data){
+      localStorage.setItem('accessToken',data.access_token);
+      data = JSON.stringify(data);
+      localStorage.setItem('userdata',data);
+      localStorage.setItem("isLogin",'true');
+    }else{
+      data=localStorage.getItem("userdata");
+      data = JSON.parse(data);
+    }
+    return data;
+  }
+
+  userProf(data){
+     if(data){
+      localStorage.setItem('accessToken',data.access_token);
+      data = JSON.stringify(data);
+      localStorage.setItem('userdata',data);
+    }else{
+      data=localStorage.getItem("userdata");
+      data = JSON.parse(data);
+    }
+    return data;
+  }
+   logout(){
+     localStorage.clear();
+     sessionStorage.clear();
+     localStorage.setItem("isLogin",'false');
+
+   }
 
 }

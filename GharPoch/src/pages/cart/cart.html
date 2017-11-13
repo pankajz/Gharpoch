@@ -15,33 +15,33 @@
 
 <ion-content class="shop_categories_inner">
   <ion-item>
-    <ion-label color="primary" stacked>Enter Name</ion-label>
+    <ion-label stacked>Enter Name</ion-label>
     <ion-input type="text" placeholder="Enter Name" [(ngModel)]="name"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label color="primary" stacked>Enter Email</ion-label>
+    <ion-label  stacked>Enter Email</ion-label>
     <ion-input type="email" placeholder="Enter Email" [(ngModel)]="email"></ion-input>
   </ion-item>
 	<ion-item>
-    <ion-label color="primary" stacked>Enter Phone Number</ion-label>
+    <ion-label stacked>Enter Phone Number</ion-label>
     <ion-input type="tel" maxlength="12" placeholder="Enter Phone Number" [(ngModel)]="number"></ion-input>
   </ion-item>
 	<ion-item>
     <ion-textarea placeholder="Address" [(ngModel)]="address"></ion-textarea>
   </ion-item>
 	<ion-item>
-    <ion-label color="primary" stacked>City</ion-label>
+    <ion-label stacked>City</ion-label>
     <ion-select [(ngModel)]="city">
       <ion-option value="Sangli">Sangli</ion-option>
       <ion-option value="Miraj">Miraj</ion-option>
     </ion-select>
   </ion-item>
 	<ion-item>
-    <ion-label color="primary" stacked>State</ion-label>
+    <ion-label stacked>State</ion-label>
     <ion-input type="text" placeholder="State" value="Maharashtra" [(ngModel)]="state" readonly="true"></ion-input>
   </ion-item>
   <ion-item>
-  <ion-label color="primary" stacked>Delivery Slot</ion-label>
+  <ion-label  stacked>Delivery Slot</ion-label>
   <!--<ion-datetime displayFormat="HH:mm" [(ngModel)]="time"></ion-datetime>-->
   <ion-select [(ngModel)]="time">
       <ion-option value="8:30AM TO 10:30AM">8:30AM TO 10:30AM</ion-option>
@@ -51,7 +51,7 @@
     </ion-select>
   </ion-item>
 	<ion-item>
-    <ion-label color="primary" stacked>PinCode</ion-label>
+    <ion-label stacked>PinCode</ion-label>
     <ion-input [attr.maxlength]="7" type="tel" placeholder="Zip" [(ngModel)]="zip"></ion-input>
   </ion-item>
 </ion-content>

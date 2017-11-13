@@ -1,7 +1,8 @@
+
 page-signup {
 	.sign_up_page{
-		h2{
-			font-size:24px;
+		h3{
+			font-size:18px;
 			font-family: 'BrandonGrotesque-Medium';
 			color:#6f6f6f;		
 			@media(min-width:500px){
@@ -26,6 +27,20 @@ page-signup {
 			}
 			
 		}
+        ion-input{
+            width:100%;
+            //padding:20px 30px 20px 0;
+            border: 0;
+            border-bottom:1px solid #a1a1a1;
+            background:transparent;
+            font-size:16px;
+            font-family: 'Lato-Regular'; 
+            color:#6f6f6f !important;
+            box-shadow:none;
+        }
+        ion-label{
+            color:#6f6f6f !important;
+        }
 		.form_submit_fields{
 			width:80%;
 			margin:0 auto;

@@ -1,4 +1,37 @@
 page-all-product {
+	ion-segment{
+         justify-content: space-between;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        ion-segment-button.segment-button {
+            flex: 1 0 100px;
+            //display: inline-block!important;
+            min-width: 100px!important;
+            width: auto!important;
+        }
+    }
+
+	.express{
+		width: 30px;
+	}
+
+	ion-segment-button.header-tab.segment-button{
+		color:#fff;
+		border-bottom: 1px solid #eee;
+		line-height: 1.5em;
+		height: 3em;
+		overflow: hidden;
+		white-space: inherit;
+	}
+	ion-segment-button.header-tab.segment-button.segment-activated{
+		border-bottom: 3px solid #fff;
+	}
     .product-img{
 			img{
 				width:100%;
@@ -125,5 +158,34 @@ page-all-product {
         }
 		form.ng-untouched.ng-pristine.ng-valid {
 			text-align: center !important;
+		}
+		.segment-ios .segment-button.segment-activated {
+			color: #fff;
+			background-color: transparent;
+			border: transparent;
+		}
+		.segment-ios .segment-button {
+			color: #fff;
+			background-color: transparent;
+			border: transparent;
+			border-radius: 0px;
+		}
+
+		h2#alert-hdr-3 {
+			font-size: 18px;
+			border-bottom: 2px solid #72aa19;
+		}
+		h3#alert-subhdr-3 {
+			font-size: 9px;
+		}
+
+		button.disable-hover.alert-button.alert-button-md.alert-button-default.alert-button-default-md {
+			text-align: center;
+			border-radius: 2px;
+			text-transform: uppercase;
+			color: #ffffff;
+			margin: 0 25% 0 0;
+			padding: 3px 39px;
+			background: linear-gradient(to top, #72aa19 0%, #7dae1a 19%, #83ad1a 34%, #a0be1c 68%, #b1c41e 100%);
 		}
 }

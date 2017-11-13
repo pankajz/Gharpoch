@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CartPage } from '../cart/cart';
 import { StorageProvider } from '../../providers/storage/storage';
 import { AlertController } from 'ionic-angular';
+import {LoginPage} from '../login/login';
 /**
  * Generated class for the CartItemsPage page.
  *
@@ -20,9 +21,18 @@ export class CartItemsPage {
   jsonData:any;
   cartCount : any;
   total :any = 0;
+  subtot :any = 0;
+  disctot :any=0;
+  expressTime:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public stor :StorageProvider, public alertCtrl: AlertController) {
     //console.log(sessionStorage.getItem("products"));
+    if(sessionStorage.getItem('expressTime')){
+      this.expressTime = sessionStorage.getItem('expressTime');
+    }else{
+      this.expressTime = '8:30AM TO 10:30AM';
+    }
     this.getCartItem();
+    
   }
 
   getCartItem(){
@@ -49,21 +59,34 @@ export class CartItemsPage {
     var allprod = this.stor.storeProduct('');
     var countprod = 0;
     var tot = 0;
+    var stot =0;
+    var dtot =0;
     if(allprod){
       for(var i=0; i<allprod.length;i++){
         if(allprod[i].quantity>0){
+          
           countprod++;
           tot += (allprod[i].offer_price*allprod[i].quantity);
+          stot += (allprod[i].sell_price*allprod[i].quantity);
+          dtot = stot - tot;
         }
       }
     }
     console.log(countprod);
     this.cartCount = countprod;
     this.total = tot;
+    this.subtot = stot;
+    this.disctot = dtot;
   }
   order(){
     if(this.cartCount!=0){
-      this.navCtrl.push(CartPage);
+      var loginstatus = localStorage.getItem("isLogin");
+      if(loginstatus=='true'){
+        this.navCtrl.push(CartPage);
+      }else{
+        this.navCtrl.push(LoginPage);
+      }
+      
     }else{
       let alert = this.alertCtrl.create({
                 title: 'Please add product to cart.',

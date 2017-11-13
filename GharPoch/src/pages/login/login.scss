@@ -1,0 +1,180 @@
+/*Login page Styling*/
+page-login {
+	.login_page{
+		background:url('../assets/images/green_bg.jpg') transparent;
+		    height: 100vh;
+		width:100%;
+		background-size:100% 100%;	
+		background-repeat: no-repeat;	
+		text-align: center;
+		position:relative;
+		ion-content{
+			background:transparent;
+		}
+		.header-links {
+			color:#fff;
+			font-size:17px;
+			font-family: 'Lato-Bold'; 
+			letter-spacing: 1px;
+		}
+        ion-item{
+            //width:100%;
+            //padding:20px 30px 20px 0;
+            border: 0;
+            //border-bottom:1px solid #fff;
+            background:transparent;
+            font-size:16px;
+            font-family: 'BrandonGrotesque-Regular'; 
+            color:#fff;
+            text-transform:uppercase;
+            box-shadow:none;
+            letter-spacing: 1px;
+            .login-user{
+            background:url('../assets/images/user.png') transparent center left no-repeat;
+            padding-left:40px;
+            margin-bottom:10px; 
+            padding: 5px 40px;
+            color:#fff;
+			}
+			.login-pass{
+				background:url('../assets/images/lock.png') transparent center left no-repeat;
+				padding-left:40px;
+				margin-bottom:20px;
+                padding: 5px 40px;
+                color:#fff;
+			}
+        }
+        
+		form{
+			width:100%;
+			    overflow: hidden;
+			.form_fields{
+				margin-left:40px;
+				margin-top:50px;
+				@media(max-width:420px){
+							margin-left:30px;
+							margin-top:20px;
+						}
+			}			
+			input, select, button{
+				width:100%;
+				padding:20px 30px 20px 0;
+				border: 0;
+				border-bottom:1px solid #fff;
+				background:transparent;
+				font-size:16px;
+				font-family: 'BrandonGrotesque-Regular'; 
+				color:#fff;
+				text-transform:uppercase;
+				box-shadow:none;
+				letter-spacing: 1px;
+			}
+			.login-user{
+				background:url('../assets/images/user.png') transparent center left no-repeat;
+				padding-left:40px;
+			}
+			.login-pass{
+				background:url('../assets/images/lock.png') transparent center left no-repeat;
+				padding-left:40px;
+				margin-bottom:20px;
+			}
+			
+
+			::-moz-placeholder {
+			  color: #fff;
+			  letter-spacing: 1px;
+			}
+
+			:-ms-input-placeholder {
+			  color: #fff;
+			  letter-spacing: 1px;
+			}
+
+			::-webkit-input-placeholder {
+			  text-indent: 0;
+			  color: #fff;
+			  letter-spacing: 1px;
+			}
+			.form_submit_fields{
+				input{
+						width:70%;
+						border:1px solid #fff;
+						font-family: 'BrandonGrotesque-Regular'; 
+						font-size:16px;
+						color:#fff;
+						margin-bottom:20px;
+						padding:20px 0;
+						@media(max-width:360px){
+							width:80%;
+							padding:10px 0;
+							font-size:14px;
+						}
+				}
+				.login-fb{
+					width:70%;
+						border:1px solid #fff;
+						font-family: 'BrandonGrotesque-Regular'; 
+						font-size:16px;
+						color:#fff;
+						margin-bottom:20px;
+						padding:20px 0;
+						@media(max-width:360px){
+							width:80%;
+							padding:10px 0;
+							font-size:14px;
+						}
+						img{
+							    vertical-align: sub;
+						}
+				}
+			}
+			p {
+				a{
+					font-family: 'Lato-Regular'; 
+					font-size:16px;
+					color:#fff;
+					padding:0px 10px 0px;
+					margin:10px 0px 0;
+					display:block;
+					text-decoration:none;
+					letter-spacing: 1px;
+				}
+				span{
+					margin-top:0px;
+					display:block;
+					font-family: 'Lato-Regular'; 
+					font-size:16px;
+					color:#fff;
+					font-family: 'Lato-Bold'; 
+				}
+			}
+			.create-acc{
+				background:rgba(255,255,255,.2);
+				border-bottom:0px;
+				border-top:1px solid #fff;
+				margin-top:130px;
+				position: fixed;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			}
+		}
+	}	
+    .button{
+				font-family: 'Lato-Bold';
+				background:transparent;
+				letter-spacing: 1px; 
+				color:#fff; 
+				font-size:18px; 
+				width:100%;     
+				display: block; 
+				border:1px solid #fff;  
+				padding:30px 0; 
+				box-sizing:border-box;
+				@media(max-width:360px){
+					font-size:16px; 
+					padding:20px 0; 
+				}
+			}
+    
+}

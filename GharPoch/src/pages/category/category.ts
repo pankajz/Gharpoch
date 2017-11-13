@@ -15,12 +15,6 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class CategoryPage {
 
-  fruitsVegetablesRoot = 'FruitsVegetablesPage'
-  groceriesStaplesSpicesRoot = 'GroceriesStaplesSpicesPage'
-  dairyBakeryBeveragesRoot = 'DairyBakeryBeveragesPage'
-  snacksSpreadsPacksRoot = 'SnacksSpreadsPacksPage'
-  householdNeedsRoot = 'HouseholdNeedsPage'
-  personalCareBabyCareRoot = 'PersonalCareBabyCarePage'
   currState:any;
   cat:any;
 

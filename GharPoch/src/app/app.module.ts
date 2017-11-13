@@ -10,8 +10,11 @@ import { HomePage } from '../pages/home/home';
 import { ShopPage } from '../pages/shop/shop';
 import { CategoryPage } from '../pages/category/category';
 import { SignupPage } from '../pages/signup/signup';
+import { LoginPage } from '../pages/login/login';
 import { CartItemsPage } from '../pages/cart-items/cart-items';
 import { CartPage } from '../pages/cart/cart';
+import { CheckoutPage } from '../pages/checkout/checkout';
+import { ProfilePage } from '../pages/profile/profile';
 import { OrderConfirmPage } from '../pages/order-confirm/order-confirm';
 import { WebServiceProvider } from '../providers/web-service/web-service';
 import { AllProductPage } from '../pages/all-product/all-product';
@@ -28,7 +31,10 @@ import { StorageProvider } from '../providers/storage/storage';
     AllProductPage,
     OrderConfirmPage,
     CartPage,
-    CartItemsPage
+    CartItemsPage,
+    LoginPage,
+    CheckoutPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +51,10 @@ import { StorageProvider } from '../providers/storage/storage';
     AllProductPage,
     OrderConfirmPage,
     CartPage,
-    CartItemsPage
+    CartItemsPage,
+    LoginPage,
+    CheckoutPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

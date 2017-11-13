@@ -1,9 +1,4 @@
-<!--
-  Generated template for the SignupPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header class="header_gradient">
   <ion-navbar>
     <ion-title text-uppercase text-center>GharPoch<span class="sub-text">.com</span></ion-title>
@@ -11,31 +6,109 @@
 </ion-header>
 
 
+<!--<ion-content>
+  <h4>SIGN UP</h4>
+  <ion-item>
+    <ion-label floating>FirstName</ion-label>
+    <ion-input type="text"  [(ngModel)]="fname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>LastName</ion-label>
+    <ion-input type="text" [(ngModel)]="lname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>EmailId</ion-label>
+    <ion-input type="email" [(ngModel)]="emailId"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Set Password</ion-label>
+    <ion-input type="Password" [(ngModel)]="pass"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Address</ion-label>
+    <ion-input type="text" [(ngModel)]="address"></ion-input>
+  </ion-item>
+
+  
+</ion-content>-->
 <ion-content class="sign_up_page">
-	<h2 text-center text-uppercase>SIGN UP</h2>
-	<form action="" method="post">
-		<div class="form_fields">
-			<input type="text" placeholder="First Name"/>
-			<input type="text" placeholder="Last Name"/>
-			<input type="text" placeholder="Address"/>
-			<select>
-				<option>City</option>
-				<option>Mumbai</option>
-				<option>Kolkata</option>
-				<option>Chennai</option>
-			</select>
-			<input type="tel" maxlength="10" placeholder="Mobile no"/>
-			<input type="email" placeholder="Email ID"/>
-			<input type="password" placeholder="Set Password"/>
-		</div>
-		<div class="form_submit_fields">
+	<h3 text-center text-uppercase>SIGN UP</h3>
+	<!--<form action="" method="post"></form>-->
+		<!--<div class="form_fields">
+			<ion-input type="text" [(ngModel)]="fname" placeholder="First Name"></ion-input>
+			<ion-input type="text" [(ngModel)]="lname" placeholder="Last Name"></ion-input>
+			<ion-input type="text" [(ngModel)]="address" placeholder="Address"></ion-input>
+			
+       <ion-select [(ngModel)]="city">
+        <ion-option value="Sangli">Sangli</ion-option>
+        <ion-option value="Miraj">Miraj</ion-option>
+      </ion-select>
+			<ion-input type="tel" [(ngModel)]="mobile" maxlength="10" placeholder="Mobile no"></ion-input>
+			<ion-input type="email" [(ngModel)]="emailId" placeholder="Email ID"></ion-input>
+			<ion-input type="password" [(ngModel)]="password" placeholder="Set Password"></ion-input>
+		</div>-->
+		<!--<div class="form_submit_fields">
 			<input type="submit" value="Submit and make payment" text-uppercase text-center/>
 			<button text-uppercase text-center>Visit request</button>
 			<p text-center>
 				For any quarry contact us on our toll-free No. <br/> 
 				<span>1800-0000-0000</span>
 			</p>
+		</div>-->
+    <div class="form_fields">
+    <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-input type="text" [(ngModel)]="fname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input type="text" [(ngModel)]="lname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email"  [(ngModel)]="email"></ion-input>
+  </ion-item>
+	<ion-item>
+    <ion-label floating>Mobile</ion-label>
+    <ion-input type="tel" maxlength="12" [(ngModel)]="mobile"></ion-input>
+  </ion-item>
+	<ion-item>
+    <ion-label floating>Address</ion-label>
+    <ion-textarea  [(ngModel)]="address"></ion-textarea>
+  </ion-item>
+	<ion-item>
+    <ion-label floating>City</ion-label>
+    <ion-select [(ngModel)]="city">
+      <ion-option value="Sangli">Sangli</ion-option>
+      <ion-option value="Miraj">Miraj</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Set Password</ion-label>
+    <ion-input type="Password" [(ngModel)]="pass"></ion-input>
+  </ion-item>
+	<ion-item>
+    <ion-label floating>State</ion-label>
+    <ion-input type="text"  value="Maharashtra" [(ngModel)]="state" readonly="true"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>PinCode</ion-label>
+    <ion-input [attr.maxlength]="7" type="tel" [(ngModel)]="zip"></ion-input>
+  </ion-item>
+  </div>
+  <div class="form_submit_fields">
+			<!--<input type="submit" value="Submit and make payment" text-uppercase text-center/>
+			<button text-uppercase text-center>Visit request</button>-->
+			<p text-center>
+				For any quarry contact us on our toll-free No. <br/> 
+				<span>1800-0000-0000</span>
+			</p>
 		</div>
-		<button class="create-acc" text-uppercase text-center>Create an account</button>
-	</form>
+	
 </ion-content>
+<ion-footer>
+  <button ion-button full (click)="signUp()">Create Account</button>
+</ion-footer>
+
+
+

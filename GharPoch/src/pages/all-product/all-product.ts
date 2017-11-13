@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ProductsOprationsProvider } from '../../providers/products-oprations/products-oprations';
 import { StorageProvider } from '../../providers/storage/storage';
 
@@ -25,11 +25,39 @@ export class AllProductPage {
   cartlist=[];
   cartCount : any;
   total :any = 0;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider) {
+  vegetabletab:any;
+  grocerytab:any;
+  dairytab:any
+  snacktab:any;
+  housetab:any;
+  personaltab:any;
+  timeRadioOpen: boolean;
+  timeRadioResult;
+  expresstime:any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider,public alertCtrl: AlertController) {
     this.header_id = navParams.get('selected_id');
     this.header_name = navParams.get('selected_cat');
     this.cartCount=0;
     this.cartCounting();
+    if(this.header_id=='11'){
+      this.vegetabletab = 'vegetables';
+    }
+    if(this.header_id=='12'){
+      this.grocerytab = 'rice';
+    }
+    if(this.header_id=='13'){
+      this.dairytab = 'bakeryprod';
+    }
+    if(this.header_id=='14'){
+      this.snacktab = 'noodle';
+    }
+    if(this.header_id=='15'){
+      this.housetab = 'cleaning';
+    }
+    if(this.header_id=='16'){
+      this.personaltab = 'baby';
+    }
     
 }
 
@@ -57,6 +85,13 @@ export class AllProductPage {
   ionViewWillEnter() {
     this.cartCounting();
     this.items = this.stor.storeProduct('');
+    console.log(this.items);
+    if(sessionStorage.getItem('expressTime')){
+      this.expresstime = sessionStorage.getItem('expressTime');
+    }else{
+
+    }
+    
   }
 
   addToCart(item){
@@ -101,6 +136,53 @@ export class AllProductPage {
 
   gotToCart(){
     this.navCtrl.push(CartItemsPage);
+  }
+
+  timeslot(){
+    let alert = this.alertCtrl.create();
+    alert.setTitle('DELIVERY SLOT');
+    alert.setSubTitle('CHOOSE DELIVERY SLOTAS PER YOUR CONVINIENCE')
+
+    alert.addInput({
+      type: 'radio',
+      label: '8:30AM TO 10:30AM',
+      value: '8:30AM TO 10:30AM',
+      checked: true
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: '12:30PM TO 2:30PM',
+      value: '12:30PM TO 2:30PM'
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: '4:00PM TO 6:00PM',
+      value: '4:00PM TO 6:00PM'
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: '7:00PM TO 9:00PM',
+      value: '7:00PM TO 9:00PM'
+    });
+
+    //alert.addButton('Cancel');
+    alert.addButton({
+      text: 'SUBMIT',
+      handler: data => {
+        console.log('Radio data:', data);
+        this.timeRadioOpen = false;
+        this.timeRadioResult = data;
+        sessionStorage.setItem('expressTime',this.timeRadioResult);
+        this.expresstime = this.timeRadioResult ;
+      }
+    });
+
+    alert.present().then(() => {
+      this.timeRadioOpen = true;
+    });
   }
 
 }

@@ -7,6 +7,11 @@
 <ion-header class="header_gradient">
     <ion-navbar>
     	<ion-title text-uppercase text-center>GharPhoch<span class="sub-text">.com</span></ion-title>
+			<ion-buttons end>
+      <button ion-button clear icon-only (click)="gotoProfile()">
+        <img src="assets/images/user.png"/>
+      </button>
+    </ion-buttons>
     </ion-navbar>
 	<ion-slides class="main_slider" autoplay="2000" loop="true" speed="1500">
 		<ion-slide>
@@ -81,7 +86,7 @@
 				</button>
 				
     	<!--<p>standard: Today, 5:00 PM TO 8:00 PM</p>-->
-    	<h6>GHARPOCH EXPRESS : 8:30 AM - 9:30 PM</h6>
+    	<p><img class="express" src="assets/images/services.png"/> GHARPOCH EXPRESS : {{expressTime}}</p>
     </ion-title>
   </ion-toolbar>
 </ion-footer>

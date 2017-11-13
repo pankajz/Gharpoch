@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header class="header_gradient">
+<!--<ion-header class="header_gradient">
 
   <ion-navbar>
     <ion-title>CART ITEMS</ion-title>
@@ -35,4 +35,112 @@
 <ion-footer >
   <h5> Total: र {{total}}</h5>
     <button ion-button full (click)='order()'>Place Order</button>
+</ion-footer>-->
+<ion-header class="header_gradient">
+  <ion-navbar>
+    <ion-title text-uppercase text-center>your cart</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cart_page">
+    <div class="timeslots" padding text-uppercase>
+      <span>GHARPHOCH : {{expressTime}}</span>
+      <button text-uppercase text-center float-right>CHARGES <br/> APPLY</button>
+      <img src="assets/images/services.png" alt="car" class="cart-truck" float-right/>
+    </div>
+   	<ion-grid class="cat_list" text-uppercase text-center>
+		<ion-row class="cat-inner-list" *ngFor="let prod of jsonData">
+				<ion-col col-4 class="product-img">
+					<a href="#">			
+						<img src="{{prod.product_images1}}" alt="flower"/>
+					</a>
+				</ion-col>
+				<ion-col text-left col-8 class="product-details">
+					<a href="#">
+						<p text-uppercase class="cart-product-title"> {{prod.name}}<span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
+						<ion-row class="cart-details">
+							<ion-col col-5>
+								<span class="product-price">र {{prod.offer_price}}</span>		
+							</ion-col>
+							<ion-col col-7 class="cart-quantity">
+								<p text-right>Quantity : {{prod.quantity}}</p>	
+								
+							</ion-col>
+							<a href="#" (click)="remove(prod)" text-uppercase class="remove-product">REMOVE <span>X</span></a>
+						</ion-row>
+
+					</a>
+				</ion-col>
+				
+		</ion-row>
+	</ion-grid>
+ 	<!--<ion-content class="recomendation" padding text-center>		
+		<ion-row>
+			<h2  text-uppercase >RECOMMENDATION</h2>
+			<ion-slides class="cart-slider" padding  loop="false" speed="1500">
+				<ion-slide>
+					<p>र 35</p>
+					<img src="assets/images/fruits.png">
+					<span>Spring Onion</span>
+				</ion-slide>
+				<ion-slide>
+					<p>र 35</p>
+					<img src="assets/images/fruits.png">
+					<span>Spring Onion</span>
+				</ion-slide>
+			</ion-slides>
+		</ion-row>
+	</ion-content> -->
+
+  	<div class="cart-form-details"  text-left>
+		<!--<label text-uppercase text-left>ENTER YOUR DISCOUNT CODE</label>
+		<input type="text" placeholder="gauravharphoch23"/>-->
+		<ion-row class="cat-inner-list">
+				<ion-col col-6 text-uppercase  text-left class="product-list-left">
+					Total Items 
+				</ion-col>
+				<ion-col  col-6 text-uppercase   text-right class="product-list-right">
+					{{cartCount}}					
+				</ion-col>				
+		</ion-row>
+		<ion-row class="cat-inner-list">
+				<ion-col col-6 text-uppercase  text-left class="product-list-left">
+					sub Total 
+				</ion-col>
+				<ion-col  col-6 text-uppercase   text-right class="product-list-right">
+					 र {{subtot}}					
+				</ion-col>				
+		</ion-row>
+		<ion-row class="cat-inner-list">
+				<ion-col col-6 text-uppercase  text-left class="product-list-left">
+					discount
+				</ion-col>
+				<ion-col  col-6 text-uppercase   text-right class="product-list-right">
+					र -{{disctot}}					
+				</ion-col>				
+		</ion-row>
+		<!--<ion-row class="cat-inner-list">
+				<ion-col col-6 text-uppercase  text-left class="product-list-left">
+					gst
+				</ion-col>
+				<ion-col  col-6 text-uppercase   text-right class="product-list-right">
+					 र 94.00					
+				</ion-col>				
+		</ion-row>-->
+		<ion-row class="cat-inner-list grand-total">
+				<ion-col col-6 text-uppercase  text-left class="product-list-left">
+					grand total
+				</ion-col>
+				<ion-col  col-6 text-uppercase   text-right class="product-list-right">
+					 र {{total}}					
+				</ion-col>				
+		</ion-row>
+		
+	</div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button class="verify-add" (click)='order()'  text-uppercase  text-center>Verfiy Address</button>
+  </ion-toolbar>
 </ion-footer>
