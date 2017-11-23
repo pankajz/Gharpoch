@@ -24,8 +24,15 @@ export class CartItemsPage {
   subtot :any = 0;
   disctot :any=0;
   expressTime:any;
+  is_login:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public stor :StorageProvider, public alertCtrl: AlertController) {
     //console.log(sessionStorage.getItem("products"));
+    if(localStorage.getItem("isLogin")){
+      this.is_login = localStorage.getItem("isLogin");
+    }else{
+      this.is_login = 'false';
+    }
+    
     if(sessionStorage.getItem('expressTime')){
       this.expressTime = sessionStorage.getItem('expressTime');
     }else{
@@ -66,7 +73,12 @@ export class CartItemsPage {
         if(allprod[i].quantity>0){
           
           countprod++;
-          tot += (allprod[i].offer_price*allprod[i].quantity);
+          if(allprod[i].offer_price){
+            tot += (allprod[i].offer_price*allprod[i].quantity);
+          }else{
+            tot += (allprod[i].sell_price*allprod[i].quantity);
+          }
+          //tot += (allprod[i].offer_price*allprod[i].quantity);
           stot += (allprod[i].sell_price*allprod[i].quantity);
           dtot = stot - tot;
         }
@@ -82,8 +94,10 @@ export class CartItemsPage {
     if(this.cartCount!=0){
       var loginstatus = localStorage.getItem("isLogin");
       if(loginstatus=='true'){
+        sessionStorage.setItem("cartAdded",'true');
         this.navCtrl.push(CartPage);
       }else{
+        sessionStorage.setItem("cartAdded",'true');
         this.navCtrl.push(LoginPage);
       }
       
@@ -103,5 +117,28 @@ export class CartItemsPage {
       this.stor.storeProduct(this.data1);
       this.cartCounting();
       this.getCartItem();
+  }
+
+   addToCart(item){
+    item.quantity+=1;
+    //this.cartCount +=1;
+    this.stor.storeProduct(this.data1);
+    this.cartCounting();
+    //sessionStorage.setItem('cartCount',this.cartCount);
+    //console.log(JSON.stringify(item));
+    //this.cartlist.push({"product_id":item.id,"qty":item.quantity});
+  }
+
+  removeFromCart(item){
+    if(item.quantity>0){
+      item.quantity-=1;
+      //this.cartCount -=1;
+      this.stor.storeProduct(this.data1);
+      this.cartCounting();
+      //sessionStorage.setItem('cartCount',this.cartCount);
+      //console.log(JSON.stringify(item));
+    }else{
+      console.log("No item selected");
+    }
   }
 }

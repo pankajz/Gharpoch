@@ -16,6 +16,8 @@ import { CartPage } from '../pages/cart/cart';
 import { CheckoutPage } from '../pages/checkout/checkout';
 import { ProfilePage } from '../pages/profile/profile';
 import { OrderConfirmPage } from '../pages/order-confirm/order-confirm';
+import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
+import { TermsConditionsPage } from '../pages/terms-conditions/terms-conditions';
 import { WebServiceProvider } from '../providers/web-service/web-service';
 import { AllProductPage } from '../pages/all-product/all-product';
 import { ProductsOprationsProvider } from '../providers/products-oprations/products-oprations';
@@ -34,7 +36,9 @@ import { StorageProvider } from '../providers/storage/storage';
     CartItemsPage,
     LoginPage,
     CheckoutPage,
-    ProfilePage
+    ProfilePage,
+    TermsConditionsPage,
+    ForgotPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ import { StorageProvider } from '../providers/storage/storage';
     CartItemsPage,
     LoginPage,
     CheckoutPage,
-    ProfilePage
+    ProfilePage,
+    TermsConditionsPage,
+    ForgotPasswordPage
   ],
   providers: [
     StatusBar,

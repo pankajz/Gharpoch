@@ -29,19 +29,14 @@ export class WebServiceProvider {
       });
     }
 
-    getUserProfile(param){
+    getUserProfile(){
       
       return new Promise(resolve => {
         let access_token=localStorage.getItem('accessToken');
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
       headers.append('access_token', access_token);
-      this.http.post('http://gharphoch.com.cs-mum-9.webhostbox.net/api/updateProfile',{
-          "first_name":param.first_name,
-          "last_name":param.last_name,
-          "location":param.location,
-          "contact":param.contact
-        },{headers:headers})
+      this.http.get('http://gharphoch.com.cs-mum-9.webhostbox.net/api/profileDetails',{headers:headers})
           .map(res => res.json())
           .subscribe(data => {
             //debugger;

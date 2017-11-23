@@ -58,6 +58,11 @@ export class AllProductPage {
     if(this.header_id=='16'){
       this.personaltab = 'baby';
     }
+    if(sessionStorage.getItem('expressTime')){
+      this.expresstime = sessionStorage.getItem('expressTime');
+    }else{
+      this.expresstime = '8:30AM TO 9:30PM';
+    }
     
 }
 
@@ -125,7 +130,12 @@ export class AllProductPage {
       for(var i=0; i<allprod.length;i++){
         if(allprod[i].quantity>0){
           countprod++;
-          tot += (allprod[i].offer_price*allprod[i].quantity);
+          if(allprod[i].offer_price){
+            tot += (allprod[i].offer_price*allprod[i].quantity);
+          }else{
+            tot += (allprod[i].sell_price*allprod[i].quantity);
+          }
+          
         }
       }
     }
@@ -135,13 +145,21 @@ export class AllProductPage {
   }
 
   gotToCart(){
-    this.navCtrl.push(CartItemsPage);
+    if(this.cartCount==0){
+      let alert = this.alertCtrl.create({
+              title: 'There are no items in basket.',
+              buttons: ['OK']
+            });
+            alert.present();
+    }else{
+      this.navCtrl.push(CartItemsPage);
+    }
   }
 
   timeslot(){
     let alert = this.alertCtrl.create();
-    alert.setTitle('DELIVERY SLOT');
-    alert.setSubTitle('CHOOSE DELIVERY SLOTAS PER YOUR CONVINIENCE')
+    alert.setTitle('DELIVERY SLOATS');
+    alert.setSubTitle('CHOOSE DELIVERY SLOATS PER YOUR CONVENIENCE')
 
     alert.addInput({
       type: 'radio',

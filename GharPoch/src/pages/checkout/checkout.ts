@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { ShopPage } from '../shop/shop';
 
 /**
@@ -17,8 +17,8 @@ import { ShopPage } from '../shop/shop';
 export class CheckoutPage {
   orderid:any;
   delivery_time:any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public unregisterBackButtonAction: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform:Platform) {
     var parpass = this.navParams.get('resp');
     console.log(parpass);
     this.orderid = parpass.order.id;
@@ -28,7 +28,23 @@ export class CheckoutPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CheckoutPage');
+    this.initializeBackButtonCustomHandler();
   }
+
+  ionViewWillLeave() {
+        // Unregister the custom back button action for this page
+        this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+    }
+
+    public initializeBackButtonCustomHandler(): void {
+        this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+            this.customHandleBackButton();
+        }, 10);
+    }
+
+    private customHandleBackButton(): void {
+        // do what you need to do here ...
+    }
 
   gotoShop(){
     this.navCtrl.setRoot(ShopPage);

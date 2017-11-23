@@ -28,6 +28,7 @@ export class SignupPage {
   public city:any;
   public zip:any;
   public state:any;
+  public username:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
   }
@@ -41,7 +42,7 @@ export class SignupPage {
       });
       loading.present();
     if(this.validation()){
-      let json_data={"first_name":this.fname,"last_name":this.lname,"email":this.email,"password":this.pass,"location":this.address,"mobile":this.mobile,"city":this.city,"zip":this.zip,"state":this.state};
+      let json_data={"first_name":this.fname,"last_name":this.lname,"username":this.email,"email":this.email,"password":this.pass,"location":this.address,"mobile":this.mobile,"city":this.city,"zip":this.zip,"state":this.state};
       return new Promise(resolve => {
 
         this.http.post('http://gharphoch.com.cs-mum-9.webhostbox.net/api/create',json_data)
@@ -89,6 +90,10 @@ export class SignupPage {
       errmsg ="Please enter last name";
       count++;
     }
+    // else if(this.username==null){
+    //   errmsg ="Please enter user name";
+    //   count++;
+    // }
     else if(this.email==null){
       errmsg = "Please enter email id";
       count++;

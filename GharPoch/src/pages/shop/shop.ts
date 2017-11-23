@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { CategoryPage } from '../category/category';
 import { AllProductPage } from '../all-product/all-product';
 import { ProductsOprationsProvider } from '../../providers/products-oprations/products-oprations';
@@ -27,11 +27,16 @@ export class ShopPage {
   cartlist=[];
   cartCount : any=0;
   total :any = 0;
-  expressTime = '8:30AM TO 10:30AM';
+  expressTime = '8:30AM TO 9:30PM';
   profres : any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider, public webService :WebServiceProvider) {
-    this.getAllProducts();
-   
+  islogin:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public prodOpr:ProductsOprationsProvider, public stor :StorageProvider, public webService :WebServiceProvider, public alertCtrl: AlertController) {
+   var iscartadded = sessionStorage.getItem("cartAdded");
+   if(iscartadded=='true'){
+
+   }else{
+      this.getAllProducts();
+   }
     
   }
 
@@ -40,13 +45,18 @@ export class ShopPage {
      if(sessionStorage.getItem('expressTime')){
       this.expressTime = sessionStorage.getItem('expressTime');
     }else{
-      this.expressTime = '8:30AM TO 10:30AM';
+      this.expressTime = '8:30AM TO 9:30PM';
     }
   }
   
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ShopPage');
-    this.getUserProfile();
+    var loginstatus = localStorage.getItem("isLogin")
+    if(loginstatus=='true'){
+      this.getUserProfile();
+      this.islogin = true;
+    }else{
+      this.islogin = false;
+    }
   }
 
  categories(id,cat){
@@ -64,8 +74,14 @@ export class ShopPage {
         for(var i=0;i<productsLst.length;i++){
           var cat_id = productsLst[i].category_id;
           //if(parseInt(cat_id)==parseInt(this.header_id)){
-            //console.log(productsLst[i]);
-            this.items.push({'cat_id':productsLst[i].category_id,'id':productsLst[i].id,'is_active':productsLst[i].is_active,'name':productsLst[i].name,'sell_price':productsLst[i].sell_price,'offer_price':productsLst[i].offer_price,'size':productsLst[i].size,'unit':productsLst[i].unit, 'sub_category_id':productsLst[i].sub_category_id, 'description':productsLst[i].description,'product_images1':'http://gharphoch.com.cs-mum-9.webhostbox.net'+productsLst[i].product_images[0].url,'quantity':0});
+            console.log(productsLst[i].product_images[0]);
+            if(productsLst[i].product_images[0]){
+              console.log(productsLst[i].product_images[0].url);
+              this.items.push({'cat_id':productsLst[i].category_id,'id':productsLst[i].id,'is_active':productsLst[i].is_active,'name':productsLst[i].name,'sell_price':productsLst[i].sell_price,'offer_price':productsLst[i].offer_price,'size':productsLst[i].size,'unit':productsLst[i].unit, 'sub_category_id':productsLst[i].sub_category_id, 'description':productsLst[i].description,'product_images1':'http://gharphoch.com.cs-mum-9.webhostbox.net'+productsLst[i].product_images[0].url,'quantity':0});
+            }else{
+              this.items.push({'cat_id':productsLst[i].category_id,'id':productsLst[i].id,'is_active':productsLst[i].is_active,'name':productsLst[i].name,'sell_price':productsLst[i].sell_price,'offer_price':productsLst[i].offer_price,'size':productsLst[i].size,'unit':productsLst[i].unit, 'sub_category_id':productsLst[i].sub_category_id, 'description':productsLst[i].description,'product_images1':'','quantity':0});
+            }
+            
           //}
           //console.log(this.items);
         }
@@ -75,9 +91,8 @@ export class ShopPage {
   }
 
    getUserProfile(){
-      var data=localStorage.getItem("userdata");
-      data = JSON.parse(data);
-      this.webService.getUserProfile(data)
+      
+      this.webService.getUserProfile()
       .then(data => {
         this.profres = data;
         console.log(this.profres);
@@ -106,7 +121,15 @@ export class ShopPage {
   }
 
   gotToCart(){
-    this.navCtrl.push(CartItemsPage);
+    if(this.cartCount==0){
+      let alert = this.alertCtrl.create({
+              title: 'There are no items in basket.',
+              buttons: ['OK']
+            });
+            alert.present();
+    }else{
+      this.navCtrl.push(CartItemsPage);
+    }
   }
   gotoProfile(){
     this.navCtrl.push(ProfilePage);

@@ -6,6 +6,7 @@ import {AllProductPage} from '../../pages/all-product/all-product';
 import { ShopPage } from '../shop/shop';
 import { AlertController } from 'ionic-angular';
 import { StorageProvider } from '../../providers/storage/storage';
+import { WebServiceProvider } from '../../providers/web-service/web-service';
 import { CheckoutPage } from '../checkout/checkout';
 
 /**
@@ -35,22 +36,19 @@ number:any;
 data1:any;
 email:any;
 userid:any;
-  constructor(public alertCtrl: AlertController,public http:Http,public navCtrl: NavController, public navParams: NavParams, public storageProvider:StorageProvider) {
-    this.data1=sessionStorage.getItem("products");
+profres:any;
+  constructor(public alertCtrl: AlertController,public http:Http,public navCtrl: NavController, public navParams: NavParams, public storageProvider:StorageProvider, public webService: WebServiceProvider) {
+      this.data1=sessionStorage.getItem("products");
+      this.getUserdetails();
       this.data1 = JSON.parse(this.data1);
+      this.city='Sangli';
       var userdetails = localStorage.getItem("userdata");
       var userdetails1 = JSON.parse(userdetails);
       var userpro = userdetails1.user_details;
       console.log(userdetails);
-      this.name = userdetails1.first_name+userdetails1.last_name;
-      this.address = userdetails1.location;
-      this.email = userdetails1.email;
-      this.number = userpro.contact;
-      this.city = userdetails1.city;
-      this.zip = userpro.zip;
-      this.userid = userdetails1.id;
+      
       let result1=[];
-      this.city='Sangli';
+      
       //this.time = '8:30AM TO 10:30AM';
       if(sessionStorage.getItem('expressTime')){
         this.time = sessionStorage.getItem('expressTime');
@@ -74,6 +72,24 @@ userid:any;
 
     this.access_token=localStorage.getItem('accessToken');
   }
+
+  getUserdetails(){
+      
+      this.webService.getUserProfile()
+      .then(data => {
+        this.profres = data;
+        console.log(this.profres);
+        var userdetails = this.profres.response.user;
+        this.name = userdetails.first_name+userdetails.last_name;
+        this.address = userdetails.location;
+        this.email = userdetails.email;
+        this.number = userdetails.contact;
+        this.city = userdetails.user_details.city;
+        this.zip = userdetails.user_details.zip;
+        this.userid = userdetails.id;
+      });
+
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CartPage');
@@ -100,7 +116,7 @@ order(){
           .subscribe(data => {
             //debugger;
             
-            
+            sessionStorage.setItem("cartAdded",'false');
             if(data.response.flag==true)
             {
               console.log(data.response);

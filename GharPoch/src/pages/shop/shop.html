@@ -8,8 +8,8 @@
     <ion-navbar>
     	<ion-title text-uppercase text-center>GharPhoch<span class="sub-text">.com</span></ion-title>
 			<ion-buttons end>
-      <button ion-button clear icon-only (click)="gotoProfile()">
-        <img src="assets/images/user.png"/>
+      <button *ngIf="islogin==true" ion-button clear icon-only (click)="gotoProfile()">
+        <img class="profimg" src="assets/images/user.png"/>
       </button>
     </ion-buttons>
     </ion-navbar>
@@ -86,7 +86,7 @@
 				</button>
 				
     	<!--<p>standard: Today, 5:00 PM TO 8:00 PM</p>-->
-    	<p><img class="express" src="assets/images/services.png"/> GHARPOCH EXPRESS : {{expressTime}}</p>
+    	<p><img class="express" src="assets/images/services.png"/>&nbsp;&nbsp; GHARPOCH EXPRESS : {{expressTime}}</p>
     </ion-title>
   </ion-toolbar>
 </ion-footer>

@@ -13,94 +13,94 @@
 	<ion-toolbar no-border-top>
 		<!--Vegetables& Fruits-->
     <ion-segment *ngIf="this.header_id==11" [(ngModel)]="vegetabletab">
-      <ion-segment-button value="vegetables" class="header-tab">
+      <ion-segment-button value="vegetables" class="header-tab cat-align">
         Vegetables
       </ion-segment-button>
-			<ion-segment-button value="fruits" class="header-tab">
+	  <ion-segment-button value="fruits" class="header-tab cat-align">
         Fruits
       </ion-segment-button>
-      <ion-segment-button value="organic" class="header-tab">
+      <ion-segment-button value="organic" class="header-tab cat-align1">
         Organic Veggi & Fruits
       </ion-segment-button>
-      <ion-segment-button value="splveg" class="header-tab">
+      <ion-segment-button value="splveg" class="header-tab cat-align1">
         Special Combos
       </ion-segment-button>
     </ion-segment>
 
 		<!--Grocery Staples & Spices-->
 		<ion-segment *ngIf="this.header_id==12" [(ngModel)]="grocerytab">
-      <ion-segment-button value="rice" class="header-tab">
+      <ion-segment-button value="rice" class="header-tab cat-align1">
         Rice& Rice Products
       </ion-segment-button>
-      <ion-segment-button value="dal" class="header-tab">
+      <ion-segment-button value="dal" class="header-tab cat-align">
        Pulses & Dal
       </ion-segment-button>
-      <ion-segment-button value="oil" class="header-tab">
+      <ion-segment-button value="oil" class="header-tab cat-align">
         Oil & Ghee
       </ion-segment-button>
-      <ion-segment-button value="salt" class="header-tab">
-        Salt
+      <ion-segment-button value="salt" class="header-tab cat-align1">
+        Salt, Suger & Jaggery
       </ion-segment-button>
-      <ion-segment-button value="suger" class="header-tab">
+      <!--<ion-segment-button value="suger" class="header-tab cat-align">
         Sugar
-      </ion-segment-button>
-      <ion-segment-button value="aata" class="header-tab">
+      </ion-segment-button>-->
+      <ion-segment-button value="aata" class="header-tab cat-align1">
         Aata & Others
       </ion-segment-button>
-      <ion-segment-button value="spice" class="header-tab">
+      <ion-segment-button value="spice" class="header-tab cat-align">
         Spices
       </ion-segment-button>
-      <ion-segment-button value="dryfruit" class="header-tab">
+      <ion-segment-button value="dryfruit" class="header-tab cat-align">
         Dry Fruits
       </ion-segment-button>
-      <ion-segment-button value="splgro" class="header-tab">
+      <ion-segment-button value="splgro" class="header-tab cat-align1">
         Special Combos
       </ion-segment-button>
     </ion-segment>
 
 		<!--Dairy Bakery& Beverages-->
 		<ion-segment *ngIf="this.header_id==13" [(ngModel)]="dairytab">
-      <ion-segment-button value="bakeryprod" class="header-tab">
+      <ion-segment-button value="bakeryprod" class="header-tab cat-align1">
         Bakery Products
       </ion-segment-button>
-      <ion-segment-button value="dairyprod" class="header-tab">
+      <ion-segment-button value="dairyprod" class="header-tab cat-align1">
         Dairy Products
       </ion-segment-button>
-      <ion-segment-button value="beverages" class="header-tab">
+      <ion-segment-button value="beverages" class="header-tab cat-align">
         Beverages
       </ion-segment-button>
-      <ion-segment-button value="rusk" class="header-tab">
-        Rusk & Khari
+      <ion-segment-button value="rusk" class="header-tab cat-align1">
+        Biscuits, Rusk & Cookies
       </ion-segment-button>
-      <ion-segment-button value="spldai" class="header-tab">
+      <ion-segment-button value="spldai" class="header-tab cat-align1">
         Special Combos
       </ion-segment-button>
     </ion-segment>
 
 		<!--Snacks, Spreads & Packers-->
 		<ion-segment *ngIf="this.header_id==14" [(ngModel)]="snacktab">
-      <ion-segment-button value="noodle" class="header-tab">
-        Noodle
+      <ion-segment-button value="noodle" class="header-tab cat-align">
+        Noodle & Pasta
       </ion-segment-button>
-      <ion-segment-button value="pasta" class="header-tab">
+      <!--<ion-segment-button value="pasta" class="header-tab cat-align">
         Pasta
-      </ion-segment-button>
-      <ion-segment-button value="spread" class="header-tab">
+      </ion-segment-button>-->
+      <ion-segment-button value="spread" class="header-tab cat-align1">
         Spreads & Pickles
       </ion-segment-button>
-      <ion-segment-button value="namkeen" class="header-tab">
-        Namkeen &Snakes
+      <ion-segment-button value="namkeen" class="header-tab cat-align1">
+        Namkeen & Snakes
       </ion-segment-button>
-      <ion-segment-button value="sauces" class="header-tab">
-        Sauces
+      <ion-segment-button value="sauces" class="header-tab cat-align">
+        Sauces & Ketchup
       </ion-segment-button>
-      <ion-segment-button value="chocolates" class="header-tab">
-        Chocolates & Sweet
+      <ion-segment-button value="chocolates" class="header-tab cat-align1">
+        Chocolates & Sweets
       </ion-segment-button>
-      <ion-segment-button value="readymix" class="header-tab">
+      <ion-segment-button value="readymix" class="header-tab cat-align">
         Ready Mix
       </ion-segment-button>
-      <ion-segment-button value="splsna" class="header-tab">
+      <ion-segment-button value="splsna" class="header-tab cat-align1">
         Special Combos
       </ion-segment-button>
     </ion-segment>
@@ -108,53 +108,53 @@
 
 		<!--House Hold Needs-->
 		<ion-segment *ngIf="this.header_id==15"  [(ngModel)]="housetab">
-      <ion-segment-button value="cleaning" class="header-tab">
+      <ion-segment-button value="cleaning" class="header-tab cat-align1">
         Cleaning & Bathroom Needs
       </ion-segment-button>
-      <ion-segment-button value="kitchen" class="header-tab">
-        Kitchen & Dining
+      <ion-segment-button value="kitchen" class="header-tab cat-align1">
+        Kitchen & Dining Needs
       </ion-segment-button>
-      <ion-segment-button value="pooja" class="header-tab">
+      <ion-segment-button value="pooja" class="header-tab cat-align">
         Pooja Needs
       </ion-segment-button>
-      <ion-segment-button value="laundry" class="header-tab">
+      <ion-segment-button value="laundry" class="header-tab cat-align1">
         Laundry & Utensils Needs
       </ion-segment-button>
-      <ion-segment-button value="tissue" class="header-tab">
-        Tissues &Disposables
+      <ion-segment-button value="tissue" class="header-tab cat-align1">
+        Tissues & Disposables
       </ion-segment-button>
-      <ion-segment-button value="osb" class="header-tab">
+      <ion-segment-button value="osb" class="header-tab cat-align1">
         Our Super Bazaar
       </ion-segment-button>
-			<ion-segment-button value="splhou" class="header-tab">
+	  <ion-segment-button value="splhou" class="header-tab cat-align1">
         Special Combos
       </ion-segment-button>
     </ion-segment>
 
 		<!--Personal Care & Baby Care-->
-		<ion-segment *ngIf="this.header_id==16"  [(ngModel)]="personaltab">
-      <ion-segment-button value="baby" class="header-tab">
-        Baby Care
+	<ion-segment *ngIf="this.header_id==16"  [(ngModel)]="personaltab">
+      <ion-segment-button value="baby" class="header-tab cat-align1">
+        Baby Food & Other Needs
       </ion-segment-button>
-      <ion-segment-button value="hygiene" class="header-tab">
-        Personal Hygiene
+      <ion-segment-button value="hygiene" class="header-tab cat-align1">
+        Soap, Facewash & Oral Care
       </ion-segment-button>
-      <ion-segment-button value="deodorants" class="header-tab">
-        Deodorants & Perfume
+      <ion-segment-button value="deodorants" class="header-tab cat-align1">
+        Deodorants & Perfumes
       </ion-segment-button>
-      <ion-segment-button value="skin" class="header-tab">
-        Skin Care
+      <ion-segment-button value="skin" class="header-tab cat-align">
+        Shampoo & Shower Gel
       </ion-segment-button>
-      <ion-segment-button value="shaving" class="header-tab">
+	  <ion-segment-button value="hair" class="header-tab cat-align">
+        Hair Care & Skin Care
+      </ion-segment-button>
+      <ion-segment-button value="shaving" class="header-tab cat-align1">
         Shaving Needs
       </ion-segment-button>
-      <ion-segment-button value="hair" class="header-tab">
-        Hair Care
-      </ion-segment-button>
-      <ion-segment-button value="other" class="header-tab">
+      <ion-segment-button value="other" class="header-tab cat-align1">
         Other Personal needs
       </ion-segment-button>
-      <ion-segment-button value="splper" class="header-tab">
+      <ion-segment-button value="splper" class="header-tab cat-align1">
         Special Combos
       </ion-segment-button>
     </ion-segment>
@@ -168,7 +168,7 @@
 <ion-content class="shop_categories_inner">
 	<ion-row >
 		<ion-col >
-			<button ion-button clear (click)="timeslot()"><img class="express" src="assets/images/services.png"/></button>
+			<button class="expbtn" ion-button clear (click)="timeslot()"><img class="express" src="assets/images/truck.png"/> &nbsp;&nbsp; Delivery Sloats</button>
 		</ion-col>
 	</ion-row>
 	<!--Vegetables& Fruits-->
@@ -178,7 +178,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='1'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1 ||'assets/images/default.png'}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -186,13 +186,15 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<!--<strong class="quant">{{prod.quantity}}</strong>-->
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -207,7 +209,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='2'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -215,13 +217,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		 										
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -236,7 +239,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='3'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -244,13 +247,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -265,7 +269,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='4'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -273,13 +277,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -298,7 +303,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='5'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -306,13 +311,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -327,7 +333,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='6'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -335,13 +341,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -356,7 +363,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='7'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -364,13 +371,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -382,10 +390,10 @@
 		</ion-list>
 		<ion-list *ngSwitchCase="'salt'">
 			<ng-container *ngFor="let prod of items">
-					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='8'">
+					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='43'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -393,13 +401,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -409,12 +418,12 @@
 					</ion-row>
 				</ng-container>
 		</ion-list>
-		<ion-list *ngSwitchCase="'suger'">
+		<!--<ion-list *ngSwitchCase="'suger'">
 			<ng-container *ngFor="let prod of items">
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='9'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -422,13 +431,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -437,13 +447,13 @@
 							</ion-col>
 					</ion-row>
 				</ng-container>
-		</ion-list>
+		</ion-list>-->
 		<ion-list *ngSwitchCase="'aata'">
 			<ng-container *ngFor="let prod of items">
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='10'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -451,13 +461,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -472,7 +483,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='11'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -480,13 +491,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -501,7 +513,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='12'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -509,13 +521,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -530,7 +543,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='13'">
 							<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -538,13 +551,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -563,7 +577,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='14'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -571,13 +585,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -592,7 +607,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='15'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -600,13 +615,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -621,7 +637,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='16'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -629,13 +645,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -647,10 +664,10 @@
 			</ion-list>
 			<ion-list *ngSwitchCase="'rusk'">
 				<ng-container *ngFor="let prod of items">
-					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='17'">
+					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='44'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -658,13 +675,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -679,7 +697,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='18'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -687,13 +705,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -712,7 +731,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='19'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -720,13 +739,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -736,12 +756,12 @@
 					</ion-row>
 				</ng-container>
 			</ion-list>
-			<ion-list *ngSwitchCase="'pasta'">
+			<!--<ion-list *ngSwitchCase="'pasta'">
 				<ng-container *ngFor="let prod of items">
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='20'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -749,13 +769,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -764,13 +785,13 @@
 							</ion-col>
 					</ion-row>
 				</ng-container>
-			</ion-list>
+			</ion-list>-->
 			<ion-list *ngSwitchCase="'spread'">
 				<ng-container *ngFor="let prod of items">
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='21'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -778,13 +799,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -799,7 +821,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='22'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -807,13 +829,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -828,7 +851,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='23'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -836,13 +859,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -857,7 +881,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='24'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -865,13 +889,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -886,7 +911,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='25'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -894,13 +919,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -915,7 +941,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='26'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -923,13 +949,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -948,7 +975,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='27'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -956,13 +983,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -977,7 +1005,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='28'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -985,13 +1013,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1005,8 +1034,8 @@
 				<ng-container *ngFor="let prod of items">
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='29'">
 						<ion-col col-4 class="product-img">
-								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+							<a href="#">			
+								<img  src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1014,13 +1043,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1035,7 +1065,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='30'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1043,13 +1073,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1064,7 +1095,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='31'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1072,13 +1103,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1092,7 +1124,7 @@
 				<ng-container *ngFor="let prod of items">
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='32'"><ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1100,13 +1132,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1121,7 +1154,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='33'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1129,13 +1162,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1154,7 +1188,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='34'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1162,13 +1196,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1183,7 +1218,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='35'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1191,13 +1226,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1212,7 +1248,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='36'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1220,13 +1256,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1241,7 +1278,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='37'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1249,13 +1286,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1270,7 +1308,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='38'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1278,13 +1316,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1299,7 +1338,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='39'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1307,13 +1346,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1328,7 +1368,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='40'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1336,13 +1376,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1357,7 +1398,7 @@
 					<ion-row class="cat-inner-list" *ngIf="prod.cat_id==this.header_id && prod.sub_category_id=='41'">
 						<ion-col col-4 class="product-img">
 								<a href="#">			
-								<img src="{{prod.product_images1}}" alt="flower"/>
+								<img src="{{prod.product_images1}}" />
 							</a>
 							</ion-col>
 							<ion-col text-left col-8 class="product-details">
@@ -1365,13 +1406,14 @@
 								<p text-uppercase>{{prod.name}} <span float-right text-right>{{prod.size}} {{prod.unit}}</span></p>		
 									<ion-row>
 										<ion-col col-5>
-										<span class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="prod.offer_price" class="product-price">र {{prod.offer_price}} <sup>र {{prod.sell_price}}</sup></span>		
+										<span *ngIf="!prod.offer_price" class="product-price">र {{prod.sell_price}}</span>		
 									</ion-col>
 									<ion-col col-7 class="add-cart">
 										<p text-center>Add to Cart</p>		
 										<form>
 											<input (click)="removeFromCart(prod)" type="button" value="-">
-											<input type="text" value="{{prod.quantity}}">
+											<strong class="quant">{{prod.quantity}}</strong>
 											<input (click)="addToCart(prod)" type="button" value="+">
 										</form>		
 									</ion-col>
@@ -1391,7 +1433,7 @@
     	<!--<p>standard: Today, 5:00 PM TO 8:00 PM</p>
     	<p>gHARPOCH EXPRESS : bY Today, 9:00 PM</p>-->
 			<!--<p> Total: र {{total}}</p>-->
-			<p><img class="express" src="assets/images/services.png"/> GHARPOCH EXPRESS : {{expresstime}}</p>
+			<p><img class="express" src="assets/images/services.png"/>&nbsp;&nbsp; GHARPOCH EXPRESS : {{expresstime}}</p>
 			
     </ion-title>
   </ion-toolbar>

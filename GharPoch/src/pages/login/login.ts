@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Keyboard } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { HomePage } from '../home/home';
 import { ShopPage } from '../shop/shop';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { StorageProvider } from '../../providers/storage/storage';
+import { ForgotPasswordPage } from '../forgot-password/forgot-password';
+import { TermsConditionsPage } from '../terms-conditions/terms-conditions';
 
 /**
  * Generated class for the LoginPage page.
@@ -25,7 +27,12 @@ export class LoginPage {
   public email:any;
   public pass:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http, public alertCtrl: AlertController, public storageProvider:StorageProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http, public alertCtrl: AlertController, public storageProvider:StorageProvider, public keyboard: Keyboard) {
+      this.keyboard.isOpen();
+  }
+
+  openkeyboerd(){
+
   }
 
   ionViewDidLoad() {
@@ -47,7 +54,7 @@ export class LoginPage {
       alert("Please enter password");
       }
       else{
-      let json_data={"email":this.email,"password":this.pass};
+      let json_data={"username":this.email,"password":this.pass};
       return new Promise(resolve => {
 
       this.http.post('http://gharphoch.com.cs-mum-9.webhostbox.net/api/login',json_data)
@@ -72,6 +79,13 @@ export class LoginPage {
       });
     }
 
+  }
+  termCond(){
+    this.navCtrl.push(TermsConditionsPage);
+  }
+
+  forgotpass(){
+    this.navCtrl.push(ForgotPasswordPage);
   }
 
 }

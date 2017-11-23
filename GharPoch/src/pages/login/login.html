@@ -1,4 +1,4 @@
-<ion-content class="login_page">
+<ion-content class="login_page" >
 		<ion-row padding class="header-links">
 			<ion-col col-6 text-left text-uppercase >
 				 <span (click)="gotoHome()"><ion-icon name="arrow-back"></ion-icon> Back</span>
@@ -9,47 +9,29 @@
 		</ion-row>
     <ion-list padding>
     <ion-item>
-      <ion-label class="login-user">Username</ion-label>
+      <ion-label class="login-user" floating>Username</ion-label>
       <ion-input type="text" [(ngModel)]="email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label class="login-pass">Password</ion-label>
+      <ion-label class="login-pass" floating>Password</ion-label>
       <ion-input type="password" [(ngModel)]="pass"></ion-input>
     </ion-item>
 
     	
     </ion-list>
-    <ion-list padding>
+    <ion-list padding class="login-btn">
       <button ion-button outline (click)="login_fun()" class="button" color="light">Login</button>
     </ion-list>
+
+		 <p text-center class="forget-link"><a (click)="forgotpass()">Forgot your login details? Get help signing in.</a></p>
+
+		 <p text-center class="terms-text" padding>By signing Up, You agree to Gharphoch’s<a class="undr-line" (click)="termCond()"> Terms & Conditions and Privacy Policy</a></p>
     
-		<ion-content>
-			<form action="" method="post">
-				<div class="form_fields">
-					<!--<input type="text" placeholder="First Name" class="login-user"/>
-					<input type="password" placeholder="Set Password" class="login-pass"/>-->
-          <!--<ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input type="email"  [(ngModel)]="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input type="password"  [(ngModel)]="pass"></ion-input>
-          </ion-item>-->
-				</div>
-				<div class="form_submit_fields">
-					<!--<input type="submit" value="Login" text-uppercase text-center/>	-->
-          			
-				</div>
-				<!--<p  text-center><a href="#">Forgot your login details? Get help signing in.</a>
-					<br/>
-					<span>OR</span>
-				</p>
-				<div class="form_submit_fields">					
-					<button class="login-fb" text-uppercase text-center><img src="../assets/images/login-fb.png" alt="facebook"/> Connect With Facebook</button>				
-				</div>-->
+		
+		<div class="creat-account" *ngIf="!keyboard.isOpen()" class="hide-on-keyboard-open">
+			
 				<button (click)="gotoSignUp()" class="create-acc" text-uppercase text-center>Create an account</button>
-			</form>
-		</ion-content>
+			
+		</div>
 </ion-content>

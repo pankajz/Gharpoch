@@ -18,6 +18,7 @@ import { HomePage } from '../home/home';
 })
 export class ProfilePage {
   profres : any;
+  userdata:any;
   userdetails : any;
   firstname:any;
   lastname:any;
@@ -34,20 +35,23 @@ export class ProfilePage {
   }
 
    getUserProfile(){
-      var data=localStorage.getItem("userdata");
-      data = JSON.parse(data);
-      this.webService.getUserProfile(data)
+      var udata=localStorage.getItem("userdata");
+      udata = JSON.parse(udata);
+      console.log(udata)
+      //debugger;
+      this.webService.getUserProfile()
       .then(data => {
-        this.profres = data;
-        this.userdetails = this.profres.user;
+        this.userdata = data;
+        this.userdetails = this.userdata.response.user;
         console.log(this.userdetails);
         this.firstname=this.userdetails.first_name;
         this.lastname=this.userdetails.last_name;
         this.email=this.userdetails.email;
         this.number=this.userdetails.contact;
-        this.address=this.userdetails.user_details.address;
+        this.address=this.userdetails.location;
         this.city=this.userdetails.user_details.city;
       });
+      
 
     }
     logout(){

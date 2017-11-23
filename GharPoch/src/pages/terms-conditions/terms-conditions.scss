@@ -1,0 +1,65 @@
+page-terms-conditions {
+   
+	.terms{
+		h2{
+			font-size:20px;
+			letter-spacing:1px;
+			font-family: 'Lato-Bold';
+			font-weight:bold;
+			margin-top:5px;
+			border-bottom:1px solid  rgba(114,170,25,1);
+			color:#6f6f6f; 
+			margin-bottom:0;
+			position: relative;
+			&:after{
+				content:'';
+				position:absolute;
+				width:70px;
+				height:3px;
+				background:rgba(114,170,25,1);
+				bottom:-3px;
+				left:15px;
+			}
+		}
+		h3{
+			font-size:18px;
+			letter-spacing:1px;
+			font-family: 'Lato-Bold';
+			color:#6f6f6f; 
+			text-transform:uppercase;
+			margin:0;
+			padding-bottom:30px;
+		}
+		p{
+			font-size:17px;
+			letter-spacing:1px;
+			font-family: 'Lato-Regular';
+			line-height:20px;
+			color:#6f6f6f; 
+			margin:0;
+			padding-bottom:30px;
+		}
+		ion-list {
+			ion-item{
+				padding-left:0;
+				font-size:17px;
+				letter-spacing:1px;
+				font-family: 'Lato-Regular';
+				line-height:20px;
+				color:#6f6f6f; 
+				ion-label{
+						    text-overflow: initial;
+							white-space: unset;
+							margin:0;
+							padding-bottom:20px;
+				}
+				.item-inner{
+						border:0 !important;
+				}
+			}
+		}
+
+    }
+
+
+}
